@@ -1,0 +1,1 @@
+require("talonvim.core")
