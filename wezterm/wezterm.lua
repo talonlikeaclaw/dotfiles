@@ -6,7 +6,6 @@ local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
-
 -- Settings
 config.color_scheme = 'Catppuccin Mocha'
 config.window_decorations = 'RESIZE'
@@ -36,6 +35,19 @@ config.keys = {
   { key = 'c', mods = 'CTRL|SHIFT', action = act.CopyTo 'Clipboard' },
   { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' },
 }
+
+-- Set window size and position on startup
+wezterm.on('gui-startup', function(cmd)
+  local screen = wezterm.gui.screens().active
+  local width = math.floor(screen.width * 0.90) -- 80% of screen width
+  local height = math.floor(screen.height * 0.85) -- 80% of screen height
+  local left = math.floor((screen.width - width) / 2) -- Center horizontally
+  local top = math.floor((screen.height - height) / 2) -- Center vertically
+
+  local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+  window:gui_window():set_inner_size(width, height + 35)
+  window:gui_window():set_position(left, top + 25)
+end)
 
 -- and finally, return the configuration to wezterm
 return config
