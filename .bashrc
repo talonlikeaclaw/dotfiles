@@ -135,4 +135,4 @@ alias tc="tmux a -t"
 alias tn="tmux new -s"
 alias size="du -sh"
 alias tk="tmux kill-session -t"
-alias agent="ssh-agent -s ; ssh-add ~/.ssh/id_ed25519"
+alias agent='eval $(ssh-agent) ; ssh-add ~/.ssh/id_ed25519'
