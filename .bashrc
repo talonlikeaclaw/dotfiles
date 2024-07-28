@@ -1,8 +1,8 @@
 export PATH="$PATH:$HOME/Documents/Coding/Bash/bin/:$HOME/.local/bin:/opt/homebrew/bin"
 eval "$(zoxide init bash)"
-eval "$(ssh-agent -s)"
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_ed25519
 eval "$(starship init bash)"
-ssh-add ~/.ssh/id_ed25519
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -135,3 +135,4 @@ alias tc="tmux a -t"
 alias tn="tmux new -s"
 alias size="du -sh"
 alias tk="tmux kill-session -t"
+alias agent="ssh-agent -s ; ssh-add ~/.ssh/id_ed25519"
