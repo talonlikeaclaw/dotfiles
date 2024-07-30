@@ -32,6 +32,7 @@ map('t', '<C-h>', '<cmd>wincmd h<cr>', { desc = 'Go to Left Window' })
 map('n', '<leader>tl', ':Lazy<CR>', { desc = 'lazy', noremap = true, silent = true })
 map('n', '<leader>tm', ':Mason<CR>', { desc = 'mason', noremap = true, silent = true })
 map('n', '<leader>to', ':Gen<CR>', { desc = 'ollama', noremap = true, silent = true })
+api('n', '<leader>tn', ':Neotree<CR>', { desc = 'close others', noremap = true, silent = true })
 
 -- =======================
 -- Plugin Specific Keymaps

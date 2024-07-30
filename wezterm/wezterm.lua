@@ -11,7 +11,7 @@ config.color_scheme = 'Catppuccin Mocha'
 config.window_decorations = 'RESIZE'
 config.window_background_opacity = 0.94
 config.font = wezterm.font_with_fallback {
-  { family = 'JetBrainsMono Nerd Font', scale = 1.4 },
+  { family = 'JetBrainsMono Nerd Font', scale = 1.3 },
 }
 config.window_close_confirmation = 'NeverPrompt'
 config.scrollback_lines = 3000
