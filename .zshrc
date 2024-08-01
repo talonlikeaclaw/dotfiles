@@ -13,7 +13,6 @@ plugins=(
   eza
   brew
   ssh-agent
-  dirhistory
   web-search
   zoxide
   starship
