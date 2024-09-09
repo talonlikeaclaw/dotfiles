@@ -9,7 +9,6 @@ end
 -- Settings
 config.color_scheme = 'Catppuccin Mocha'
 config.window_decorations = 'RESIZE'
-config.window_background_opacity = 0.94
 config.font = wezterm.font_with_fallback {
   { family = 'JetBrainsMono Nerd Font', scale = 1.3 },
 }
