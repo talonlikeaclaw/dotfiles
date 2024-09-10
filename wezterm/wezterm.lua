@@ -7,7 +7,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 -- Settings
-config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'Tokyo Night'
 config.window_decorations = 'RESIZE'
 config.font = wezterm.font_with_fallback {
   { family = 'JetBrainsMono Nerd Font', scale = 1.3 },

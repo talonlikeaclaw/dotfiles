@@ -1,1 +1,2 @@
-require("talonvim.core")
+require 'talonvim.core'
+vim.cmd [[colorscheme tokyonight]]
