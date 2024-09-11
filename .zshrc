@@ -31,7 +31,7 @@ plugins=(
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_AUTOQUIT=false
-ZSH_TMUX_DEFAULT_SESSION_NAME="main"
+ZSH_TMUX_DEFAULT_SESSION_NAME="mainframe"
 
 # Configure eza
 zstyle ':omz:plugins:eza' dirs-first 'yes'
@@ -61,7 +61,7 @@ alias tn='tmux new-session -s '
 alias ta='tmux attach -t '
 alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t '
-alias v='neovide --no-tabs'
+alias r='ranger'
 
 # Intialize tools
 eval "$(starship init zsh)"
