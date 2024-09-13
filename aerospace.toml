@@ -118,7 +118,8 @@ alt-n = 'workspace notes'
 alt-o = 'workspace obsidian'
 alt-r = 'workspace raindrop'
 alt-s = 'workspace sioyek'
-alt-w = 'workspace wezterm'
+alt-t = 'workspace terminal'
+alt-w = 'workspace windows'
 alt-z = 'workspace zen'
 
 alt-shift-a = 'move-node-to-workspace ableton'
@@ -133,7 +134,8 @@ alt-shift-n = 'move-node-to-workspace notes'
 alt-shift-o = 'move-node-to-workspace obsidian'
 alt-shift-r = 'move-node-to-workspace raindrop'
 alt-shift-s = 'move-node-to-workspace sioyek'
-alt-shift-w = 'move-node-to-workspace wezterm'
+alt-shift-t = 'move-node-to-workspace terminal'
+alt-shift-w = 'move-node-to-workspace windows'
 alt-shift-z = 'move-node-to-workspace zen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -160,7 +162,7 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace wezterm' # mnemonics T - Terminal
+run = 'move-node-to-workspace terminal' # mnemonics T - Terminal
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
