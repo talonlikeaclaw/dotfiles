@@ -24,7 +24,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 0
+accordion-padding = 20
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE']
@@ -116,6 +116,7 @@ alt-g = 'workspace gaming'
 alt-m = 'workspace music'
 alt-n = 'workspace notes'
 alt-o = 'workspace obsidian'
+alt-p = 'workspace personal'
 alt-r = 'workspace raindrop'
 alt-s = 'workspace sioyek'
 alt-t = 'workspace terminal'
@@ -125,13 +126,14 @@ alt-z = 'workspace zen'
 alt-shift-a = 'move-node-to-workspace ableton'
 alt-shift-b = 'move-node-to-workspace brave'
 alt-shift-c = 'move-node-to-workspace code'
-alt-shift-d = 'move-node-to-workspace datebase'
+alt-shift-d = 'move-node-to-workspace database'
 alt-shift-e = 'move-node-to-workspace extra'
 alt-shift-f = 'move-node-to-workspace finder'
 alt-shift-g = 'move-node-to-workspace gaming'
 alt-shift-m = 'move-node-to-workspace music'
 alt-shift-n = 'move-node-to-workspace notes'
 alt-shift-o = 'move-node-to-workspace obsidian'
+alt-shift-p = 'move-node-to-workspace personal'
 alt-shift-r = 'move-node-to-workspace raindrop'
 alt-shift-s = 'move-node-to-workspace sioyek'
 alt-shift-t = 'move-node-to-workspace terminal'
