@@ -1,16 +1,4 @@
-# Place a copy of this config to ~/.aerospace.toml
-# After that, you can edit ~/.aerospace.toml to your liking
-
-# It's not necessary to copy all keys to your config.
-# If the key is missing in your config, "default-config.toml" will serve as a fallback
-
-# You can use it to add commands that run after login to macOS user session.
-# 'start-at-login' needs to be 'true' for 'after-login-command' to work
-# Available commands: https://nikitabobko.github.io/AeroSpace/commands
 after-login-command = []
-
-# You can use it to add commands that run after AeroSpace startup.
-# 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = ['exec-and-forget sketchybar']
 
@@ -22,8 +10,6 @@ enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
-# The 'accordion-padding' specifies the size of accordion padding
-# You can set 0 to disable the padding feature
 accordion-padding = 20
 
 # Notify Sketchybar about workspace change
@@ -112,15 +98,15 @@ alt-c = 'workspace code'
 alt-d = 'workspace database'
 alt-e = 'workspace extra'
 alt-f = 'workspace finder'
-alt-g = 'workspace gaming'
+alt-g = 'workspace graphic'
 alt-m = 'workspace music'
 alt-n = 'workspace notes'
 alt-o = 'workspace obsidian'
 alt-p = 'workspace personal'
-alt-r = 'workspace raindrop'
-alt-s = 'workspace sioyek'
-alt-t = 'workspace terminal'
-alt-w = 'workspace windows'
+alt-r = 'workspace reader'
+alt-s = 'workspace school'
+alt-t = 'workspace typing'
+alt-w = 'workspace wezterm'
 alt-z = 'workspace zen'
 
 alt-shift-a = 'move-node-to-workspace ableton'
@@ -129,15 +115,15 @@ alt-shift-c = 'move-node-to-workspace code'
 alt-shift-d = 'move-node-to-workspace database'
 alt-shift-e = 'move-node-to-workspace extra'
 alt-shift-f = 'move-node-to-workspace finder'
-alt-shift-g = 'move-node-to-workspace gaming'
+alt-shift-g = 'move-node-to-workspace graphic'
 alt-shift-m = 'move-node-to-workspace music'
 alt-shift-n = 'move-node-to-workspace notes'
 alt-shift-o = 'move-node-to-workspace obsidian'
 alt-shift-p = 'move-node-to-workspace personal'
-alt-shift-r = 'move-node-to-workspace raindrop'
-alt-shift-s = 'move-node-to-workspace sioyek'
-alt-shift-t = 'move-node-to-workspace terminal'
-alt-shift-w = 'move-node-to-workspace windows'
+alt-shift-r = 'move-node-to-workspace reader'
+alt-shift-s = 'move-node-to-workspace school'
+alt-shift-t = 'move-node-to-workspace typing'
+alt-shift-w = 'move-node-to-workspace wezterm'
 alt-shift-z = 'move-node-to-workspace zen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -163,17 +149,49 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace terminal' # mnemonics T - Terminal
+if.app-id = 'com.ableton.live'
+run = 'move-node-to-workspace ableton' # mnemonics B - Brave Browser
+
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace brave' # mnemonics B - Brave Browser
+
+[[on-window-detected]]
+if.app-id = 'com.microsfot.VSCode'
+run = 'move-node-to-workspace code' # mnemonics C - Code
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.datagrip'
+run = 'move-node-to-workspace database' # mnemonics D - Database
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = 'move-node-to-workspace music' # mnemonics M - Music
+
+[[on-window-detected]]
+if.app-id = 'come.apple.Notes'
+run = 'move-node-to-workspace notes' # mnemonics N - Notes
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace obsidian' # mnemonics O - Obsidian
 
 [[on-window-detected]]
-if.app-id = 'org.mozilla.com.zen.browser'
-run = 'move-node-to-workspace zen' # mnemonics Z - Zen Browser
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace personal' # mnemonics P - Personal
 
 [[on-window-detected]]
-if.app-id = 'com.brave.Browser'
-run = 'move-node-to-workspace brave' # mnemonics B - Brave Browser
+if.app-id = 'info.sioyek.sioyek'
+run = 'move-node-to-workspace reader' # mnemonics R - Reader
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Word'
+run = 'move-node-to-workspace typing' # mnemonics T - Typing
+
+[[on-window-detected]]
+if.app-id = 'com.github.wez.wezterm'
+run = 'move-node-to-workspace wezterm' # mnemonics W - Wezterm
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.com.zen.browser'
+run = 'move-node-to-workspace zen' # mnemonics Z - Zen Browser
