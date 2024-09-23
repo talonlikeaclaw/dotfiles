@@ -10,6 +10,7 @@ return {
     local lspui = require 'lspconfig.ui.windows'
     local cmp_nvim_lsp = require 'cmp_nvim_lsp'
     local capabilities = cmp_nvim_lsp.default_capabilities()
+    require('java').setup()
 
     local signs = { Error = ' ', Warn = ' ', Hint = '󰠠 ', Info = ' ' }
     for type, icon in pairs(signs) do
