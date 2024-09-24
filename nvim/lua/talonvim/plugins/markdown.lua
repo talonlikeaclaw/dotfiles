@@ -35,7 +35,7 @@ return {
     },
     code_blocks = {
       enable = true,
-      style = 'simple',
+      style = 'language',
       hl = 'CursorLine',
     },
     headings = {
