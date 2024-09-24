@@ -18,7 +18,7 @@ return {
         },
         t = {
           j = {
-            k = '<C-\\><C-n>',
+            k = false,
           },
         },
         v = {
