@@ -25,6 +25,9 @@ return {
     lspconfig.jdtls.setup {
       capabilities = capabilities,
       filetypes = { 'java' },
+      handlers = {
+        ['$/progress'] = function(_, result, ctx) end,
+      },
     }
 
     -- html
