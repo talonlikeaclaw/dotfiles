@@ -39,6 +39,7 @@ map('n', '<leader>tl', ':Lazy<CR>', { desc = 'lazy', noremap = true, silent = tr
 map('n', '<leader>tm', ':Mason<CR>', { desc = 'mason', noremap = true, silent = true })
 map('n', '<leader>to', ':Gen<CR>', { desc = 'ollama', noremap = true, silent = true })
 api('n', '<leader>tn', ':Neotree<CR>', { desc = 'neotree', noremap = true, silent = true })
+api('n', '<leader>tj', ':JavaRunnerRunMain<CR>', { desc = 'java', noremap = true, silent = true })
 map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = 'undotree', noremap = true, silent = true })
 
 -- =======================
