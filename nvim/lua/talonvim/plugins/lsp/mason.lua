@@ -33,6 +33,8 @@ return {
         'jdtls',
         'cssls',
         'marksman',
+        'eslint',
+        'ts_ls',
       },
       -- auto installation
       automatic_installation = true,
@@ -51,8 +53,6 @@ return {
         { 'emmet-ls' },
         { 'css-lsp' },
         { 'prettier' },
-        { 'eslint_d' },
-        { 'eslint-lsp' },
         { 'jdtls' },
         { 'google-java-format' },
       },

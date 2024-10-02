@@ -7,6 +7,7 @@ return {
     conform.setup {
       formatters_by_ft = {
         javascript = { 'prettier' },
+        typescript = { 'prettier' },
         css = { 'prettier' },
         html = { 'prettier' },
         json = { 'prettier' },
@@ -14,6 +15,11 @@ return {
         markdown = { 'prettier' },
         lua = { 'stylua' },
         java = { 'google-java-format' },
+      },
+      formatters = {
+        prettier = {
+          prepend_args = { '--print-width', '80', '--tab-width', '2' },
+        },
       },
       format_on_save = {
         lsp_fallback = true,

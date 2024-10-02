@@ -93,5 +93,15 @@ return {
     lspconfig.cssls.setup {
       capabilities = capabilities,
     }
+
+    lspconfig.eslint.setup {
+      capabilities = capabilities,
+      filetypes = { 'javascript' },
+    }
+
+    lspconfig.ts_ls.setup {
+      capabilities = capabilities,
+      filetypes = { 'javascript' },
+    }
   end,
 }

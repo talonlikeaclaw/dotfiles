@@ -7,6 +7,7 @@ return { -- Highlight, edit, and navigate code
       'c',
       'diff',
       'html',
+      'javascript',
       'lua',
       'luadoc',
       'markdown',
