@@ -8,9 +8,9 @@ map('n', '<leader>cn', '<cmd>set nu!<CR>', { desc = 'toggle line number' })
 map('n', '<leader>cr', '<cmd>set rnu!<CR>', { desc = 'toggle relative number' })
 
 -- Editing
-map('n', '<leader>q', ':q<cr>', { desc = 'quit buffer', noremap = true, silent = true })
-map('n', '<leader>Q', ':qa!<cr>', { desc = 'quit talonvim', noremap = true, silent = true })
-map('n', '<leader>C', ':Telescope find_files cwd=~/.config/nvim<CR>', { desc = 'configuration', noremap = true, silent = true })
+map('n', '<leader>q', '<cmd>q<cr>', { desc = 'quit buffer', noremap = true, silent = true })
+map('n', '<leader>Q', '<cmd>qa!<cr>', { desc = 'quit talonvim', noremap = true, silent = true })
+map('n', '<leader>C', '<cmd>Telescope find_files cwd=~/.config/nvim<CR>', { desc = 'configuration', noremap = true, silent = true })
 map({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'save file' })
 map({ 'n', 'v' }, '<leader>cf', function()
   conform.format {
@@ -35,11 +35,11 @@ map('n', '<leader>w-', '<cmd>sp<CR>', { desc = 'split across', remap = true })
 map('n', '<leader>w|', '<cmd>vs<CR>', { desc = 'split down', remap = true })
 
 -- Tools
-map('n', '<leader>tl', ':Lazy<CR>', { desc = 'lazy', noremap = true, silent = true })
-map('n', '<leader>tm', ':Mason<CR>', { desc = 'mason', noremap = true, silent = true })
-map('n', '<leader>to', ':Gen<CR>', { desc = 'ollama', noremap = true, silent = true })
-api('n', '<leader>tn', ':Neotree<CR>', { desc = 'neotree', noremap = true, silent = true })
-api('n', '<leader>tj', ':JavaRunnerRunMain<CR>', { desc = 'java', noremap = true, silent = true })
+map('n', '<leader>tl', '<cmd>Lazy<CR>', { desc = 'lazy', noremap = true, silent = true })
+map('n', '<leader>tm', '<cmd>Mason<CR>', { desc = 'mason', noremap = true, silent = true })
+map('n', '<leader>to', '<cmd>Gen<CR>', { desc = 'ollama', noremap = true, silent = true })
+api('n', '<leader>tn', '<cmd>Neotree<CR>', { desc = 'neotree', noremap = true, silent = true })
+api('n', '<leader>tj', '<cmd>JavaRunnerRunMain<CR>', { desc = 'java', noremap = true, silent = true })
 map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = 'undotree', noremap = true, silent = true })
 
 -- =======================
@@ -47,7 +47,7 @@ map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = 'un
 -- =======================
 
 -- Oil
-map('n', '-', '<CMD>Oil<CR>', { desc = 'open parent directory' })
+map('n', '-', '<cmd>Oil<CR>', { desc = 'open parent directory' })
 
 -- Telescope
 map('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = 'find recent files' })

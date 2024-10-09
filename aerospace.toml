@@ -165,7 +165,7 @@ if.app-id = 'com.jetbrains.datagrip'
 run = 'move-node-to-workspace database' # mnemonics D - Database
 
 [[on-window-detected]]
-if.app-id = 'com.apple.Music'
+if.app-id = 'com.tidal.desktop'
 run = 'move-node-to-workspace music' # mnemonics M - Music
 
 [[on-window-detected]]
