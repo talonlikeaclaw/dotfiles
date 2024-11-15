@@ -1,0 +1,17 @@
+#!/bin/bash
+
+options=(
+	style=round
+	width=3.0
+	hidpi=on
+	active_color=0xffB0E0E6
+  active_color_gradient=0xff4169E1
+  glow_effect=on
+  glow_color=0x80FFFFFF
+  glow_radius=5.0
+  animation=on
+  animation_duration=200
+  blacklist="iPhone Mirroring"
+)
+
+borders "${options[@]}"
