@@ -62,6 +62,7 @@ alias ta='tmux attach -t '
 alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t '
 alias r='ranger'
+alias v='nvim'
 
 # Intialize tools
 eval "$(starship init zsh)"
