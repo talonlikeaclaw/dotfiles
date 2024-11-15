@@ -1,6 +1,6 @@
 after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = ['exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0']
+after-startup-command = ['exec-and-forget borders active_color=0xffB3EBF2 inactive_color=0xff494d64 width=3.0 radius=10.0']
 
 # Start AeroSpace at login
 start-at-login = true
@@ -11,9 +11,6 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 accordion-padding = 20
-
-# Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE']
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -41,12 +38,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 5
-inner.vertical =   5
-outer.left =       5
-outer.bottom =     5
-outer.top =        5
-outer.right =      5
+inner.horizontal = 7
+inner.vertical =   7
+outer.left =       7
+outer.bottom =     7
+outer.top =        7
+outer.right =      7
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -108,7 +105,7 @@ alt-n = 'workspace notes'
 alt-o = 'workspace obsidian'
 alt-p = 'workspace perplexity'
 alt-r = 'workspace reader'
-alt-s = 'workspace steam'
+alt-s = 'workspace safari'
 alt-t = 'workspace typing'
 alt-w = 'workspace wezterm'
 alt-z = 'workspace zen'
@@ -129,7 +126,7 @@ alt-shift-n = 'move-node-to-workspace notes'
 alt-shift-o = 'move-node-to-workspace obsidian'
 alt-shift-p = 'move-node-to-workspace perplexity'
 alt-shift-r = 'move-node-to-workspace reader'
-alt-shift-s = 'move-node-to-workspace steam'
+alt-shift-s = 'move-node-to-workspace safari'
 alt-shift-t = 'move-node-to-workspace typing'
 alt-shift-w = 'move-node-to-workspace wezterm'
 alt-shift-z = 'move-node-to-workspace zen'
@@ -188,7 +185,6 @@ run = 'move-node-to-workspace notes' # mnemonics N - Notes
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace obsidian' # mnemonics O - Obsidian
  
-
 [[on-window-detected]]
 if.app-id = 'ai.perplexity.mac'
 run = 'move-node-to-workspace perplexity' # mnemonics P - Perplexity
@@ -198,12 +194,12 @@ if.app-id = 'info.sioyek.sioyek'
 run = 'move-node-to-workspace reader' # mnemonics R - Reader
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.Word'
-run = 'move-node-to-workspace typing' # mnemonics T - Typing
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace safari' # mnemonics S - Safari
 
 [[on-window-detected]]
-if.app-id = 'com.valvesoftware.steam'
-run = 'move-node-to-workspace steam' # mnemonics S - Steam
+if.app-id = 'com.microsoft.Word'
+run = 'move-node-to-workspace typing' # mnemonics T - Typing
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
