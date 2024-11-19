@@ -17,12 +17,14 @@ config.window_close_confirmation = 'NeverPrompt'
 config.scrollback_lines = 3000
 config.use_fancy_tab_bar = false
 config.window_background_opacity = 0.95
+config.max_fps = 120
+config.animation_fps = 120
 config.audible_bell = 'Disabled'
 config.window_padding = {
-  left = 15,
-  right = 15,
-  top = 15,
-  bottom = 15,
+  left = 10,
+  right = 10,
+  top = 10,
+  bottom = 10,
 }
 
 -- Keys
