@@ -101,7 +101,7 @@ return {
 
     lspconfig.ts_ls.setup {
       capabilities = capabilities,
-      filetypes = { 'javascript' },
+      filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
     }
   end,
 }
