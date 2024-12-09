@@ -10,6 +10,7 @@ return {
         enable = false,
       },
     }
+    require('mini.sessions').setup()
     require('mini.surround').setup()
     require('mini.icons').setup()
   end,
