@@ -50,6 +50,17 @@ return {
       timeout = 1000,
     },
     quickfile = { enabled = true },
+    scroll = {
+      animate = {
+        duration = { step = 15, total = 250 },
+        easing = 'linear',
+      },
+      spamming = 10, -- threshold for spamming detection
+      -- what buffers to animate
+      filter = function(buf)
+        return vim.g.snacks_scroll ~= false and vim.b[buf].snacks_scroll ~= false and vim.bo[buf].buftype ~= 'terminal'
+      end,
+    },
     statuscolumn = { enabled = true },
     words = { enabled = true },
     styles = {
@@ -60,11 +71,39 @@ return {
   },
   keys = {
     {
-      '<leader>un',
+      '<leader>z',
       function()
-        Snacks.notifier.hide()
+        Snacks.zen()
       end,
-      desc = 'Dismiss All Notifications',
+      desc = 'Toggle Zen Mode',
+    },
+    {
+      '<leader>Z',
+      function()
+        Snacks.zen.zoom()
+      end,
+      desc = 'Toggle Zoom',
+    },
+    {
+      '<leader>.',
+      function()
+        Snacks.scratch()
+      end,
+      desc = 'Toggle Scratch Buffer',
+    },
+    {
+      '<leader>S',
+      function()
+        Snacks.scratch.select()
+      end,
+      desc = 'Select Scratch Buffer',
+    },
+    {
+      '<leader>n',
+      function()
+        Snacks.notifier.show_history()
+      end,
+      desc = 'Notification History',
     },
     {
       '<leader>bd',
@@ -74,18 +113,11 @@ return {
       desc = 'Delete Buffer',
     },
     {
-      '<leader>gg',
+      '<leader>cR',
       function()
-        Snacks.lazygit()
+        Snacks.rename.rename_file()
       end,
-      desc = 'Lazygit',
-    },
-    {
-      '<leader>gb',
-      function()
-        Snacks.git.blame_line()
-      end,
-      desc = 'Git Blame Line',
+      desc = 'Rename File',
     },
     {
       '<leader>gB',
@@ -95,11 +127,25 @@ return {
       desc = 'Git Browse',
     },
     {
+      '<leader>gb',
+      function()
+        Snacks.git.blame_line()
+      end,
+      desc = 'Git Blame Line',
+    },
+    {
       '<leader>gf',
       function()
         Snacks.lazygit.log_file()
       end,
       desc = 'Lazygit Current File History',
+    },
+    {
+      '<leader>gg',
+      function()
+        Snacks.lazygit()
+      end,
+      desc = 'Lazygit',
     },
     {
       '<leader>gl',
@@ -109,11 +155,11 @@ return {
       desc = 'Lazygit Log (cwd)',
     },
     {
-      '<leader>cR',
+      '<leader>un',
       function()
-        Snacks.rename.rename_file()
+        Snacks.notifier.hide()
       end,
-      desc = 'Rename File',
+      desc = 'Dismiss All Notifications',
     },
     {
       '<c-/>',
