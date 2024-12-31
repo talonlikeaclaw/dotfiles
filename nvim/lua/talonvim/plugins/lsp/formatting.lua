@@ -15,7 +15,6 @@ return {
         yaml = { 'prettier' },
         markdown = { 'prettier' },
         lua = { 'stylua' },
-        java = { 'google-java-format' },
       },
       formatters = {
         prettier = {

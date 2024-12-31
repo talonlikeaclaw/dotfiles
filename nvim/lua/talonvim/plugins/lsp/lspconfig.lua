@@ -10,7 +10,6 @@ return {
     local lspui = require 'lspconfig.ui.windows'
     local cmp_nvim_lsp = require 'cmp_nvim_lsp'
     local capabilities = cmp_nvim_lsp.default_capabilities()
-    require('java').setup()
 
     local signs = { Error = ' ', Warn = ' ', Hint = '󰠠 ', Info = ' ' }
     for type, icon in pairs(signs) do
@@ -20,15 +19,6 @@ return {
 
     --LspInfo Borders
     lspui.default_options.border = 'double'
-
-    -- java
-    lspconfig.jdtls.setup {
-      capabilities = capabilities,
-      filetypes = { 'java' },
-      handlers = {
-        ['$/progress'] = function(_, result, ctx) end,
-      },
-    }
 
     -- html
     lspconfig.html.setup {
