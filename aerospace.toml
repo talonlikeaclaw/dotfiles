@@ -190,7 +190,7 @@ if.app-id = 'info.sioyek.sioyek'
 run = 'move-node-to-workspace reader'
 
 [[on-window-detected]]
-if.app-id = 'net.kovidgoyal.kitty'
+if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace terminal'
 
 [[on-window-detected]]
