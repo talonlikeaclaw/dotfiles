@@ -63,6 +63,9 @@ alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t '
 alias r='ranger'
 alias v='nvim'
+alias sh='history | fzf'
+alias szsh='source ~/.zshrc'
+alias y='yazi'
 
 # Intialize tools
 eval "$(starship init zsh)"
