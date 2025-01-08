@@ -1,11 +1,9 @@
 font-family = BerkeleyMono Nerd Font
 font-size = 15
-theme = tokyonight-storm
+theme = tokyonight
 background-opacity = 0.9
 background-blur-radius = 20
 mouse-hide-while-typing = true
 macos-titlebar-style = transparent
 window-decoration = true
 shell-integration = zsh
-
-keybind = global:cmd+g=toggle_quick_terminal
