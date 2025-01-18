@@ -102,6 +102,7 @@ alt-f = 'workspace finder'
 alt-m = 'workspace music'
 alt-n = 'workspace notes'
 alt-o = 'workspace obsidian'
+alt-p = 'workspace productivity'
 alt-r = 'workspace reader'
 alt-t = 'workspace terminal'
 alt-z = 'workspace zen'
@@ -119,6 +120,7 @@ alt-shift-f = 'move-node-to-workspace finder'
 alt-shift-m = 'move-node-to-workspace music'
 alt-shift-n = 'move-node-to-workspace notes'
 alt-shift-o = 'move-node-to-workspace obsidian'
+alt-shift-p = 'move-node-to-workspace productivity'
 alt-shift-r = 'move-node-to-workspace reader'
 alt-shift-t = 'move-node-to-workspace terminal'
 alt-shift-z = 'move-node-to-workspace zen'
@@ -174,8 +176,16 @@ if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace obsidian'
  
 [[on-window-detected]]
-if.app-id = 'ai.perplexity.mac'
-run = 'move-node-to-workspace perplexity'
+if.app-id = 'com.apple.iCal'
+run = 'move-node-to-workspace productivity'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+run = 'move-node-to-workspace productivity'
+
+[[on-window-detected]]
+if.app-id = 'io.raindrop.macapp'
+run = 'move-node-to-workspace productivity'
 
 [[on-window-detected]]
 if.app-id = 'info.sioyek.sioyek'
