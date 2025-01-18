@@ -38,19 +38,6 @@ map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = 'un
 -- oil
 map('n', '-', '<cmd>Oil<CR>', { desc = 'open parent directory' })
 
--- neotree
-
--- telescope
-map('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = 'find recent files' })
-map('n', '<leader>fw', '<cmd>Telescope live_grep<CR>', { desc = 'find with grep' })
-map('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = 'find files' })
-map('n', '<leader><leader>', '<cmd>Telescope buffers<CR>', { desc = 'search existing buffers' })
-map('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'help page' })
-map('n', '<leader>fo', '<cmd>Telescope oldfiles<CR>', { desc = 'find oldfiles' })
-map('n', '<leader>fc', '<cmd>Telescope git_commits<CR>', { desc = 'git commits' })
-map('n', '<leader>fg', '<cmd>Telescope git_status<CR>', { desc = 'git status' })
-map('n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>', { desc = 'find all' })
-
 -- tmux
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'move focus to the left window' })
 map('n', '<C-l>', '<C-w><C-l>', { desc = 'move focus to the right window' })
