@@ -53,7 +53,6 @@ alias cat='bat -p'
 alias can='bat'
 alias lg='lazygit'
 alias n='clear ; neofetch'
-alias music='psql -h 192.168.0.140 -U talon-likeaclaw -d music_db'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias size="du -sh"
 alias td='tmux detach'
