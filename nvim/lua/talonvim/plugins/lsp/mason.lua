@@ -30,7 +30,6 @@ return {
     mason_lspconfig.setup {
       ensure_installed = {
         'lua_ls',
-        'jdtls',
         'cssls',
         'marksman',
         'eslint',
@@ -53,8 +52,6 @@ return {
         { 'emmet-ls' },
         { 'css-lsp' },
         { 'prettier' },
-        { 'jdtls' },
-        { 'google-java-format' },
       },
 
       auto_update = true,

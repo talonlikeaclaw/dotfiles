@@ -95,7 +95,7 @@ alt-3 = 'workspace workspace-3'
 alt-4 = 'workspace workspace-4'
 alt-5 = 'workspace workspace-5'
 alt-a = 'workspace ableton'
-alt-b = 'workspace brave'
+alt-b = 'workspace browser'
 alt-c = 'workspace code'
 alt-d = 'workspace database'
 alt-f = 'workspace finder'
@@ -103,11 +103,9 @@ alt-g = 'workspace gpt'
 alt-m = 'workspace music'
 alt-n = 'workspace notes'
 alt-o = 'workspace obsidian'
-alt-p = 'workspace perplexity'
+alt-p = 'workspace productivity'
 alt-r = 'workspace reader'
-alt-s = 'workspace safari'
-alt-t = 'workspace typing'
-alt-w = 'workspace wezterm'
+alt-t = 'workspace terminal'
 alt-z = 'workspace zen'
 
 alt-shift-1 = 'move-node-to-workspace workspace-1'
@@ -116,7 +114,7 @@ alt-shift-3 = 'move-node-to-workspace workspace-3'
 alt-shift-4 = 'move-node-to-workspace workspace-4'
 alt-shift-5 = 'move-node-to-workspace workspace-5'
 alt-shift-a = 'move-node-to-workspace ableton'
-alt-shift-b = 'move-node-to-workspace brave'
+alt-shift-b = 'move-node-to-workspace browser'
 alt-shift-c = 'move-node-to-workspace code'
 alt-shift-d = 'move-node-to-workspace database'
 alt-shift-f = 'move-node-to-workspace finder'
@@ -124,11 +122,9 @@ alt-shift-g = 'move-node-to-workspace gpt'
 alt-shift-m = 'move-node-to-workspace music'
 alt-shift-n = 'move-node-to-workspace notes'
 alt-shift-o = 'move-node-to-workspace obsidian'
-alt-shift-p = 'move-node-to-workspace perplexity'
+alt-shift-p = 'move-node-to-workspace productivity'
 alt-shift-r = 'move-node-to-workspace reader'
-alt-shift-s = 'move-node-to-workspace safari'
-alt-shift-t = 'move-node-to-workspace typing'
-alt-shift-w = 'move-node-to-workspace wezterm'
+alt-shift-t = 'move-node-to-workspace terminal'
 alt-shift-z = 'move-node-to-workspace zen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -155,56 +151,64 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'com.ableton.live'
-run = 'move-node-to-workspace ableton' # mnemonics B - Brave Browser
+run = 'move-node-to-workspace ableton'
 
 [[on-window-detected]]
-if.app-id = 'com.brave.Browser'
-run = 'move-node-to-workspace brave' # mnemonics B - Brave Browser
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace code' # mnemonics C - Code
-
-[[on-window-detected]]
-if.app-id = 'com.jetbrains.datagrip'
-run = 'move-node-to-workspace database' # mnemonics D - Database
-
-[[on-window-detected]]
-if.app-id = 'com.openai.chat'
-run = 'move-node-to-workspace gpt' # mnemonics G - GPT
-
-[[on-window-detected]]
-if.app-id = 'com.tidal.desktop'
-run = 'move-node-to-workspace music' # mnemonics M - Music
-
-[[on-window-detected]]
-if.app-id = 'come.apple.Notes'
-run = 'move-node-to-workspace notes' # mnemonics N - Notes
-
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace obsidian' # mnemonics O - Obsidian
- 
-[[on-window-detected]]
-if.app-id = 'ai.perplexity.mac'
-run = 'move-node-to-workspace perplexity' # mnemonics P - Perplexity
-
-[[on-window-detected]]
-if.app-id = 'info.sioyek.sioyek'
-run = 'move-node-to-workspace reader' # mnemonics R - Reader
+if.app-id = 'org.mozilla.firefox'
+run = 'move-node-to-workspace browser'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
-run = 'move-node-to-workspace safari' # mnemonics S - Safari
+run = 'move-node-to-workspace browser'
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.Word'
-run = 'move-node-to-workspace typing' # mnemonics T - Typing
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace browser'
 
 [[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace wezterm' # mnemonics W - Wezterm
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace code'
 
 [[on-window-detected]]
-if.app-id = 'org.mozilla.com.zen.browser'
-run = 'move-node-to-workspace zen' # mnemonics Z - Zen Browser
+if.app-id = 'com.jetbrains.datagrip'
+run = 'move-node-to-workspace database'
+
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+run = 'move-node-to-workspace gpt'
+
+[[on-window-detected]]
+if.app-id = 'com.tidal.desktop'
+run = 'move-node-to-workspace music'
+
+[[on-window-detected]]
+if.app-id = 'come.apple.Notes'
+run = 'move-node-to-workspace notes'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace obsidian'
+ 
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = 'move-node-to-workspace productivity'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+run = 'move-node-to-workspace productivity'
+
+[[on-window-detected]]
+if.app-id = 'io.raindrop.macapp'
+run = 'move-node-to-workspace productivity'
+
+[[on-window-detected]]
+if.app-id = 'info.sioyek.sioyek'
+run = 'move-node-to-workspace reader'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace terminal'
+
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace zen'

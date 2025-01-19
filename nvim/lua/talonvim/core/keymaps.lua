@@ -20,25 +20,14 @@ map({ 'n', 'v' }, '<leader>cf', function()
   }
 end, { desc = 'format' })
 
--- Hard Mode (No arrow keys)
-map('n', '<Up>', '<Nop>', { noremap = true, silent = true })
-map('n', '<Down>', '<Nop>', { noremap = true, silent = true })
-map('n', '<Left>', '<Nop>', { noremap = true, silent = true })
-map('n', '<Right>', '<Nop>', { noremap = true, silent = true })
-map('i', '<Up>', '<Nop>', { noremap = true, silent = true })
-map('i', '<Down>', '<Nop>', { noremap = true, silent = true })
-map('i', '<Left>', '<Nop>', { noremap = true, silent = true })
-map('i', '<Right>', '<Nop>', { noremap = true, silent = true })
-
--- Windows
+-- windows
 map('n', '<leader>w-', '<cmd>sp<CR>', { desc = 'split across', remap = true })
 map('n', '<leader>w|', '<cmd>vs<CR>', { desc = 'split down', remap = true })
 
--- Tools
+-- tools
 map('n', '<leader>tl', '<cmd>Lazy<CR>', { desc = 'lazy', noremap = true, silent = true })
 map('n', '<leader>tm', '<cmd>Mason<CR>', { desc = 'mason', noremap = true, silent = true })
 map('n', '<leader>to', '<cmd>Gen<CR>', { desc = 'ollama', noremap = true, silent = true })
-api('n', '<leader>tn', '<cmd>Neotree<CR>', { desc = 'neotree', noremap = true, silent = true })
 api('n', '<leader>tj', '<cmd>JavaRunnerRunMain<CR>', { desc = 'java', noremap = true, silent = true })
 map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = 'undotree', noremap = true, silent = true })
 
@@ -46,22 +35,29 @@ map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = 'un
 -- Plugin Specific Keymaps
 -- =======================
 
--- Oil
+-- oil
 map('n', '-', '<cmd>Oil<CR>', { desc = 'open parent directory' })
 
--- Telescope
-map('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = 'find recent files' })
-map('n', '<leader>fw', '<cmd>Telescope live_grep<CR>', { desc = 'find with grep' })
-map('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = 'find files' })
-map('n', '<leader><leader>', '<cmd>Telescope buffers<CR>', { desc = 'search existing buffers' })
-map('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'help page' })
-map('n', '<leader>fo', '<cmd>Telescope oldfiles<CR>', { desc = 'find oldfiles' })
-map('n', '<leader>fc', '<cmd>Telescope git_commits<CR>', { desc = 'git commits' })
-map('n', '<leader>fg', '<cmd>Telescope git_status<CR>', { desc = 'git status' })
-map('n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>', { desc = 'find all' })
-
--- Tmux
+-- tmux
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'move focus to the left window' })
 map('n', '<C-l>', '<C-w><C-l>', { desc = 'move focus to the right window' })
 map('n', '<C-j>', '<C-w><C-j>', { desc = 'move focus to the lower window' })
 map('n', '<C-k>', '<C-w><C-k>', { desc = 'move focus to the upper window' })
+
+-- =======================
+--    LazyVim  Keymaps
+-- =======================
+
+-- better up/down
+map({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true, silent = true })
+map({ 'n', 'x' }, '<Down>', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true, silent = true })
+map({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, silent = true })
+map({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, silent = true })
+
+-- move lines
+map('n', '<A-j>', "<cmd>execute 'move .+' . v:count1<cr>==", { desc = 'Move Down' })
+map('n', '<A-k>', "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = 'Move Up' })
+map('i', '<A-j>', '<esc><cmd>m .+1<cr>==gi', { desc = 'Move Down' })
+map('i', '<A-k>', '<esc><cmd>m .-2<cr>==gi', { desc = 'Move Up' })
+map('v', '<A-j>', ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = 'Move Down' })
+map('v', '<A-k>', ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = 'Move Up' })

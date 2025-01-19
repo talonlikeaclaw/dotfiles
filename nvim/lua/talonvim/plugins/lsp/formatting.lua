@@ -7,6 +7,7 @@ return {
     conform.setup {
       formatters_by_ft = {
         javascript = { 'prettier' },
+        javascriptreact = { 'prettier' },
         typescript = { 'prettier' },
         css = { 'prettier' },
         html = { 'prettier' },
@@ -14,7 +15,6 @@ return {
         yaml = { 'prettier' },
         markdown = { 'prettier' },
         lua = { 'stylua' },
-        java = { 'google-java-format' },
       },
       formatters = {
         prettier = {
