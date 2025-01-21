@@ -1,6 +1,7 @@
 # Export paths
 export PATH="$PATH:$HOME/.local/bin:/opt/homebrew/bin"
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$PATH:/usr/local/share/dotnet"
 export EDITOR="/opt/homebrew/bin/nvim"
 
 # Zsh History
@@ -54,6 +55,7 @@ alias can='bat'
 alias lg='lazygit'
 alias n='clear ; neofetch'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
+alias py='python3'
 alias size="du -sh"
 alias td='tmux detach'
 alias tn='tmux new-session -s '
