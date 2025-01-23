@@ -3,15 +3,11 @@ local map = vim.keymap.set
 local api = vim.api.nvim_set_keymap
 local conform = require 'talonvim.plugins.lsp.formatting'
 
--- Code
-map('n', '<leader>cn', '<cmd>set nu!<CR>', { desc = 'toggle line number' })
-map('n', '<leader>cr', '<cmd>set rnu!<CR>', { desc = 'toggle relative number' })
-
 -- Editing
 map('n', '<leader>q', '<cmd>q<cr>', { desc = 'quit buffer', noremap = true, silent = true })
 map('n', '<leader>Q', '<cmd>qa!<cr>', { desc = 'quit talonvim', noremap = true, silent = true })
 map('n', '<leader>C', '<cmd>Telescope find_files cwd=~/.config/nvim<CR>', { desc = 'configuration', noremap = true, silent = true })
-map({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'save file' })
+map({ 'i', 'x', 'n', 's' }, '<leader>cs', '<cmd>w<cr><esc>', { desc = 'save file' })
 map({ 'n', 'v' }, '<leader>cf', function()
   conform.format {
     lsp_fallback = true,
