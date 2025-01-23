@@ -93,5 +93,27 @@ return {
       capabilities = capabilities,
       filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
     }
+
+    -- Python LS
+    lspconfig.pylsp.setup {
+      capabilities = capabilities,
+      settings = {
+        pylsp = {
+          plugins = {
+            pycodestyle = {
+              maxLineLength = 88,
+              ignore = { 'E501', 'D100' },
+            },
+            pylint = {
+              enabled = true,
+              args = { '--disable=C0116', '--disable=C0114' },
+              pyflakes = { enabled = true },
+              black = { enabled = true },
+              autopep8 = { enabled = false },
+            },
+          },
+        },
+      },
+    }
   end,
 }

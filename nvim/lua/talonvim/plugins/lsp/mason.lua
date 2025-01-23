@@ -34,6 +34,7 @@ return {
         'marksman',
         'eslint',
         'ts_ls',
+        'pylsp',
       },
       -- auto installation
       automatic_installation = true,
@@ -52,6 +53,8 @@ return {
         { 'emmet-ls' },
         { 'css-lsp' },
         { 'prettier' },
+        { 'pylsp' },
+        { 'black' },
       },
 
       auto_update = true,
