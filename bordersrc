@@ -1,0 +1,10 @@
+options=(
+	style=round
+	width=3.0
+  radius=10.0
+	hidpi=on
+	active_color=0xffB3EBF2
+  inactive_color=0xff494d64
+  blacklist="iPhone Mirroring"
+)
+borders "${options[@]}"
