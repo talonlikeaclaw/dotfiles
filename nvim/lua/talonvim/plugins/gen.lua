@@ -2,7 +2,7 @@ return {
   {
     'David-Kunz/gen.nvim',
     opts = {
-      model = 'mistral-nemo:latest',
+      model = 'mistral-small:latest',
       host = '127.0.0.1',
       port = '11434',
       quit_map = 'q',

@@ -106,7 +106,7 @@ return {
             },
             pylint = {
               enabled = true,
-              args = { '--disable=C0116', '--disable=C0114' },
+              args = { '--disable=C0116', '--disable=C0114', '--disable=C0301', '--disable=C0303' },
               pyflakes = { enabled = true },
               black = { enabled = true },
               autopep8 = { enabled = false },
