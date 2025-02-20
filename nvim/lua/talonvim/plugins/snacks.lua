@@ -298,7 +298,7 @@ return {
       function()
         Snacks.picker.projects()
       end,
-      desc = 'projects',
+      desc = ' projects',
     },
     -- LSP
     {
