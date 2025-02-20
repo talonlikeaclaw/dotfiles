@@ -21,11 +21,12 @@ map('n', '<leader>w-', '<cmd>sp<CR>', { desc = 'split across', remap = true })
 map('n', '<leader>w|', '<cmd>vs<CR>', { desc = 'split down', remap = true })
 
 -- tools
-map('n', '<leader>tl', '<cmd>Lazy<CR>', { desc = 'lazy', noremap = true, silent = true })
-map('n', '<leader>tm', '<cmd>Mason<CR>', { desc = 'mason', noremap = true, silent = true })
-map('n', '<leader>to', '<cmd>Gen<CR>', { desc = 'ollama', noremap = true, silent = true })
-api('n', '<leader>tj', '<cmd>JavaRunnerRunMain<CR>', { desc = 'java', noremap = true, silent = true })
-map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = 'undotree', noremap = true, silent = true })
+map('n', '<leader>tl', '<cmd>Lazy<CR>', { desc = ' lazy', noremap = true, silent = true })
+map('n', '<leader>tm', '<cmd>Mason<CR>', { desc = ' mason', noremap = true, silent = true })
+map('n', '<leader>to', '<cmd>Gen<CR>', { desc = ' ollama', noremap = true, silent = true })
+api('n', '<leader>tj', '<cmd>JavaRunnerRunMain<CR>', { desc = ' java', noremap = true, silent = true })
+map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = ' undotree', noremap = true, silent = true })
+map('n', '<leader>tn', '<cmd>Neotree<cr>', { desc = ' neotree', noremap = true, silent = true })
 
 -- =======================
 -- Plugin Specific Keymaps
