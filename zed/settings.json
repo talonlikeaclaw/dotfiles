@@ -36,8 +36,8 @@
         "dock": "left",
         "default_width": 420,
         "default_model": {
-            "provider": "zed.dev",
-            "model": "claude-3-7-sonnet-latest"
+            "provider": "ollama",
+            "model": "codellama:7b"
         },
         "version": "2"
     },
@@ -68,6 +68,10 @@
                 "activate_script": "default"
             }
         }
+    },
+    "journal": {
+        "path": "~/Documents/Obsidian",
+        "hour_format": "hour24"
     },
     "telemetry": {
         "metrics": false,
