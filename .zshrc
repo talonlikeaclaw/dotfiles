@@ -1,7 +1,8 @@
 # Export paths
 export PATH="$PATH:$HOME/.local/bin:/opt/homebrew/bin"
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$PATH:/usr/local/share/dotnet"
+export DOTNET_ROOT="/usr/local/share/dotnet"
+export PATH="$DOTNET_ROOT:$PATH"
 export EDITOR="/opt/homebrew/bin/nvim"
 
 # Zsh History
