@@ -28,9 +28,16 @@
         }
     },
     {
+      "context": "Editor && vim_mode == visual",
+      "bindings": {
+          "space a": "workspace::ToggleLeftDock"
+      }
+    },
+    {
         "context": "Editor && vim_mode == insert",
         "bindings": {
-            "j j": ["workspace::SendKeystrokes", "escape"]
+            "j j": ["workspace::SendKeystrokes", "escape"],
+            "h h": ["workspace::SendKeystrokes", "escape"]
         }
     },
     {
@@ -40,7 +47,7 @@
         }
     },
     {
-        "context": "AssistantPanel",
+        "context": "AssistantPanel && vim_mode == normal",
         "bindings": {
             "space a": "workspace::ToggleLeftDock"
         }
