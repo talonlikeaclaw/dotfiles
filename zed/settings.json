@@ -7,11 +7,22 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "theme": "Catppuccin Mocha (Blue Blur+)",
+    "languages": {
+        "Python": {
+            "show_edit_predictions": true
+        },
+        "CSharp": {
+            "show_edit_predictions": true
+        }
+    },
+    "theme": "Catppuccin Espresso (Blur)",
     "icon_theme": "Catppuccin Frappé",
     "base_keymap": "VSCode",
     "features": {
         "edit_prediction_provider": "zed"
+    },
+    "edit_predictions": {
+        "mode": "subtle"
     },
     "buffer_font_family": "JetBrainsMono Nerd Font",
     "buffer_font_size": 14,
@@ -21,20 +32,17 @@
     "ui_font_size": 16,
     "ui_font_weight": 400,
     "tab_size": 4,
-    "scrollbar": {
-        "show": "never"
-    },
     "active_pane_modifiers": {
         "magnification": 1.0,
         "border_size": 0.0,
-        "inactive_opacity": 0.8
+        "inactive_opacity": 0.95
     },
     "assistant": {
         "dock": "left",
         "default_width": 420,
         "default_model": {
             "provider": "zed.dev",
-            "model": "claude-3-7-sonnet-latest"
+            "model": "claude-3-5-sonnet-latest"
         },
         "version": "2"
     },
@@ -66,16 +74,77 @@
             }
         }
     },
+    "journal": {
+        "path": "~/Documents/Obsidian",
+        "hour_format": "hour24"
+    },
     "telemetry": {
         "metrics": false,
         "diagnostics": false
     },
     "vim_mode": true,
     "relative_line_numbers": true,
-    "vertical_scroll_margin": 20,
+    "vertical_scroll_margin": 5,
     "autoscroll_on_clicks": true,
     "format_on_save": "off",
-    "restore_on_startup": "none",
+    "restore_on_startup": "last_workspace",
+    "language_models": {
+        // "ollama": {
+        //     "api_url": "http://localhost:11434",
+        //     "available_models": [
+        //         {
+        //             "name": "gemma3:12b",
+        //             "display_name": "Gemma 3 12B",
+        //             "max_tokens": 32000
+        //         },
+        //         {
+        //             "name": "mistral-nemo:latest",
+        //             "display_name": "Mistral Nemo 12B",
+        //             "max_tokens": 32000
+        //         },
+        //         {
+        //             "name": "mistral-small3.1",
+        //             "display_name": "Mistral Small 24B",
+        //             "max_tokens": 16000
+        //         },
+        //         {
+        //             "name": "qwen2.5:latest",
+        //             "display_name": "Qwen 7B",
+        //             "max_tokens": 32000
+        //         },
+        //         {
+        //             "name": "qwen2.5:14b",
+        //             "display_name": "Qwen 14B",
+        //             "max_tokens": 32000
+        //         }
+        //     ]
+        // },
+        "ollama": {
+            "api_url": "http://192.168.0.143:11434",
+            "available_models": [
+                {
+                    "name": "gemma3:12b",
+                    "display_name": "Gemma 3 12B (PC)",
+                    "max_tokens": 32000
+                },
+                {
+                    "name": "qwen3:14b",
+                    "display_name": "Qwen 14B (PC)",
+                    "max_tokens": 32000
+                },
+                {
+                    "name": "qwen3",
+                    "display_name": "Qwen 8B (PC)",
+                    "max_tokens": 32000
+                },
+                {
+                    "name": "qwen3:4b",
+                    "display_name": "Qwen 4B (PC)",
+                    "max_tokens": 32000
+                }
+            ]
+        }
+    },
     "auto_install_extensions": {
         "basher": true,
         "catppuccin-blur-plus": true,

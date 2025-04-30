@@ -1,0 +1,55 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            // "shift shift": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space a": "workspace::ToggleLeftDock",
+            "space e": "workspace::ToggleRightDock",
+            "space t": "workspace::ToggleBottomDock",
+            "space w h": "workspace::ActivatePaneLeft",
+            "space w l": "workspace::ActivatePaneRight",
+            "space w k": "workspace::ActivatePaneUp",
+            "space w j": "workspace::ActivatePaneDown",
+            "space s": "file_finder::Toggle",
+            "ctrl-l": "pane::ActivateNextItem",
+            "ctrl-h": "pane::ActivatePreviousItem"
+        }
+    },
+    {
+      "context": "Editor && vim_mode == visual",
+      "bindings": {
+          "space a": "workspace::ToggleLeftDock"
+      }
+    },
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "j j": ["workspace::SendKeystrokes", "escape"],
+            "h h": ["workspace::SendKeystrokes", "escape"]
+        }
+    },
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "space e": "workspace::ToggleRightDock"
+        }
+    },
+    {
+        "context": "AssistantPanel && vim_mode == normal",
+        "bindings": {
+            "space a": "workspace::ToggleLeftDock"
+        }
+    }
+]
