@@ -44,3 +44,5 @@ if status is-interactive
 		tmux new-session -A -s mainframe \; send-keys "clear && fastfetch" C-m
 	end
 end
+
+eval (keychain --eval --agents ssh id_ed25519)
