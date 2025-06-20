@@ -40,6 +40,7 @@ alias y 'yazi'
 # ▶ Tmux Autostart
 # ------------------------------
 if status is-interactive
+	set fish_greeting ""
 	if not set -q TMUX
 		tmux new-session -A -s mainframe \; send-keys "clear && fastfetch" C-m
 	end
