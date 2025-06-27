@@ -38,11 +38,12 @@
         "inactive_opacity": 0.95
     },
     "agent": {
+        "default_profile": "ask",
         "dock": "left",
         "default_width": 420,
         "default_model": {
-            "provider": "zed.dev",
-            "model": "claude-3-5-sonnet-latest"
+            "provider": "ollama",
+            "model": "qwen2.5-coder:7b"
         },
         "version": "2"
     },
@@ -123,24 +124,10 @@
             "api_url": "http://192.168.0.143:11434",
             "available_models": [
                 {
-                    "name": "gemma3:12b",
-                    "display_name": "Gemma 3 12B (PC)",
-                    "max_tokens": 32000
-                },
-                {
-                    "name": "qwen3:14b",
-                    "display_name": "Qwen 14B (PC)",
-                    "max_tokens": 32000
-                },
-                {
-                    "name": "qwen3",
-                    "display_name": "Qwen 8B (PC)",
-                    "max_tokens": 32000
-                },
-                {
-                    "name": "qwen3:4b",
-                    "display_name": "Qwen 4B (PC)",
-                    "max_tokens": 32000
+                    "name": "qwen2.5-coder:7b",
+                    "display_name": "Qwen Coder 7B (PC)",
+                    "max_tokens": 32768,
+                    "supports_tools": true
                 }
             ]
         }
