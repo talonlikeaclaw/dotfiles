@@ -1,1 +1,3 @@
 fish_variables
+fisher_plugins/
+__fish_command_not_found.fish

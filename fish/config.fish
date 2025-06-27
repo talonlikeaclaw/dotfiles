@@ -6,6 +6,7 @@ set -Ux PATH $PATH $HOME/.local/bin
 set -Ux DOTNET_ROOT /usr/local/share/dotnet
 set -Ux PATH $DOTNET_ROOT $PATH
 set -Ux EDITOR /usr/bin/nvim
+set -Ux OLLAMA_HOST 0.0.0.0
 
 # ------------------------------
 # ▶ Starship prompt
@@ -45,5 +46,3 @@ if status is-interactive
 		tmux new-session -A -s mainframe \; send-keys "clear && fastfetch" C-m
 	end
 end
-
-eval (keychain --eval --agents ssh id_ed25519)
