@@ -14,7 +14,7 @@ Currently, this repo contains my configuration files for the following:
 - **Bat**: A `cat` replacement
 - **Fish**: A Unix-like shell designed for usability and interactivity
 - **Ghostty**: A GPU-accelerated terminal emulator with simple configuration
-- **FastFetch**: A beautiful ASCII art output with system information
+- **FastFetch**: A beautiful ASCII art output with system information (config inspired by [this post](https://old.reddit.com/r/GarudaLinux/comments/1dcq0dl/making_fastfetch_more_beautiful_linux/))
 - **Starship**: A highly customizable prompt customizer with a beautiful design
 - **Tmux**: An amazing terminal multiplexer that maintains persistent sessions after rebooting
 - **Zed**: An awesome open-source AI-integrated editor written in Rust, usable with local Ollama LLM models
