@@ -1,3 +1,6 @@
+functions/*
+conf.d/*
+!functions/my_*.fish
+!conf.d/my_*.fish
+fish_plugins
 fish_variables
-fisher_plugins/
-__fish_command_not_found.fish
