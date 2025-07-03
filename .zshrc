@@ -7,8 +7,6 @@ export OLLAMA_HOST=0.0.0.0:11434
 export CUDA_VISIBLE_DEVICES=0
 
 # Zsh History
-HISTSIZE=1000
-SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 # Add Oh My Zsh plugins
