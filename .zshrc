@@ -1,9 +1,10 @@
 # Export paths
-export PATH="$PATH:$HOME/.local/bin:/opt/homebrew/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export ZSH="$HOME/.oh-my-zsh"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
-export EDITOR="/opt/homebrew/bin/nvim"
+export OLLAMA_HOST=0.0.0.0:11434
+export CUDA_VISIBLE_DEVICES=0
 
 # Zsh History
 HISTSIZE=1000
