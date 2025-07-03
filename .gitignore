@@ -1,6 +1,6 @@
-functions/*
-conf.d/*
-!functions/my_*.fish
-!conf.d/my_*.fish
-fish_plugins
-fish_variables
+fish/functions/*
+fish/conf.d/*
+!fish/functions/my_*.fish
+!fish/conf.d/my_*.fish
+fish/fish_plugins
+fish/fish_variables
