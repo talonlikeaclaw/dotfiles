@@ -16,7 +16,7 @@ disabled = true
 disabled = true
 
 [custom.coding_dir]
-when = """ test "$PWD" = "$HOME/Coding" """
+when = """ test "$PWD" = "$HOME/Code" """
 command = """ echo "📁" """
 format = "[$output]($style) "
 

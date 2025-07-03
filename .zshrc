@@ -1,13 +1,12 @@
 # Export paths
-export PATH="$PATH:$HOME/.local/bin:/opt/homebrew/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export ZSH="$HOME/.oh-my-zsh"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
-export EDITOR="/opt/homebrew/bin/nvim"
+export OLLAMA_HOST=0.0.0.0:11434
+export CUDA_VISIBLE_DEVICES=0
 
 # Zsh History
-HISTSIZE=1000
-SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 # Add Oh My Zsh plugins
@@ -54,7 +53,7 @@ alias c='clear'
 alias cat='bat -p'
 alias can='bat'
 alias lg='lazygit'
-alias n='clear ; neofetch'
+alias n='clear ; fastfetch'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias py='python3'
 alias size="du -sh"
@@ -75,4 +74,4 @@ eval "$(zoxide init zsh)"
 
 # Clear screen and run neofetch at the end
 clear
-neofetch
+fastfetch
