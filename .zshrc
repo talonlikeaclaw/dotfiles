@@ -6,8 +6,6 @@ export PATH="$DOTNET_ROOT:$PATH"
 export EDITOR="/opt/homebrew/bin/nvim"
 
 # Zsh History
-HISTSIZE=1000
-SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 # Add Oh My Zsh plugins
