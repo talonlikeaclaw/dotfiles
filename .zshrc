@@ -52,7 +52,7 @@ alias c='clear'
 alias cat='bat -p'
 alias can='bat'
 alias lg='lazygit'
-alias n='clear ; neofetch'
+alias n='clear ; fastfetch'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias py='python3'
 alias size="du -sh"
@@ -73,5 +73,6 @@ eval "$(zoxide init zsh)"
 
 # Clear screen and run neofetch at the end
 clear
-neofetch
+fastfetch
+
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
