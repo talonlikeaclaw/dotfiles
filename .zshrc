@@ -77,3 +77,4 @@ clear
 fastfetch
 
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
