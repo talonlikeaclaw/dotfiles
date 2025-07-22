@@ -1,0 +1,11 @@
+[[language]]
+name = "markdown"
+scope = "source.markdown"
+file-types = ["md", "markdown"]
+comment-tokens = ["<!--", "-->"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+
+[language.formatter]
+command = "npx"
+args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
