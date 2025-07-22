@@ -1,5 +1,6 @@
 # Export paths
 export PATH="$PATH:$HOME/.local/bin:/opt/homebrew/bin"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export ZSH="$HOME/.oh-my-zsh"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
@@ -12,7 +13,6 @@ HISTFILE=~/.zsh_history
 plugins=(
   eza
   brew
-  ssh-agent
   web-search
   zoxide
   starship
@@ -66,6 +66,7 @@ alias v='nvim'
 alias shis='history | fzf'
 alias szsh='source ~/.zshrc'
 alias y='yazi'
+alias h='helix'
 
 # Intialize tools
 eval "$(starship init zsh)"
