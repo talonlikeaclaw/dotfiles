@@ -76,3 +76,4 @@ eval "$(zoxide init zsh)"
 # Clear screen and run neofetch at the end
 clear
 fastfetch
+export PATH="$HOME/.npm-global/bin:$PATH"
