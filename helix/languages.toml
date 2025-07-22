@@ -9,3 +9,11 @@ auto-format = true
 [language.formatter]
 command = "npx"
 args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+
+[[language]]
+name = "rust"
+auto-format = true
+
+[language.formatter]
+command = "rustfmt"
+args = ["--emit", "stdout"]
