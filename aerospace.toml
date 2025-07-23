@@ -105,6 +105,7 @@ alt-n = 'workspace notes'
 alt-o = 'workspace obsidian'
 alt-p = 'workspace productivity'
 alt-r = 'workspace reader'
+alt-s = 'workspace safari'
 alt-t = 'workspace terminal'
 alt-z = 'workspace zen'
 
@@ -128,8 +129,6 @@ alt-shift-s = 'move-node-to-workspace safari'
 alt-shift-t = 'move-node-to-workspace terminal'
 alt-shift-z = 'move-node-to-workspace zen'
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 

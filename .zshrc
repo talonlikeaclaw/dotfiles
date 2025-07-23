@@ -65,7 +65,7 @@ alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t '
 alias r='ranger'
 alias v='nvim'
-alias sh='history | fzf'
+alias shis='history | fzf'
 alias szsh='source ~/.zshrc'
 alias y='yazi'
 
@@ -76,3 +76,4 @@ eval "$(zoxide init zsh)"
 # Clear screen and run neofetch at the end
 clear
 neofetch
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
