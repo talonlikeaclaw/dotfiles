@@ -4,7 +4,9 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export ZSH="$HOME/.oh-my-zsh"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
-export EDITOR="/opt/homebrew/bin/nvim"
+export OLLAMA_HOST=0.0.0.0:11434
+export CUDA_VISIBLE_DEVICES=0
+export EDITOR=/opt/homebrew/bin/hx
 
 # Zsh History
 HISTFILE=~/.zsh_history
