@@ -6,6 +6,7 @@ export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
 export OLLAMA_HOST=0.0.0.0:11434
 export CUDA_VISIBLE_DEVICES=0
+export EDITOR=helix
 
 # Zsh History
 HISTFILE=~/.zsh_history
