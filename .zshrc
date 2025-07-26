@@ -66,7 +66,7 @@ alias v='nvim'
 alias shis='history | fzf'
 alias szsh='source ~/.zshrc'
 alias y='yazi'
-alias h='helix'
+alias h='hx'
 
 # Intialize tools
 eval "$(starship init zsh)"
