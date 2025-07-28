@@ -1,3 +1,4 @@
+# Markdown Config
 [[language]]
 name = "markdown"
 scope = "source.markdown"
@@ -10,6 +11,7 @@ auto-format = true
 command = "npx"
 args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
 
+# Rust Config
 [[language]]
 name = "rust"
 auto-format = true
@@ -17,3 +19,12 @@ auto-format = true
 [language.formatter]
 command = "rustfmt"
 args = ["--emit", "stdout"]
+
+# Typescript Config
+[[language]]
+name = "typescript"
+auto-format = true
+
+[language.formatter]
+command = "npx"
+args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
