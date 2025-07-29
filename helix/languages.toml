@@ -1,37 +1,137 @@
-# CSS Config
+# Language Server Definitions
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-html-languageserver]
+command = "html-languageserver"
+args = ["--stdio"]
+
+[language-server.vscode-css-languageserver]
+command = "css-languageserver"
+args = ["--stdio"]
+
+[language-server.vscode-json-languageserver]
+command = "json-languageserver"
+args = ["--stdio"]
+
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = ["--stdio"]
+
+[language-server.tailwindcss-language-server]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[language-server.emmet-ls]
+command = "emmet-ls"
+args = ["--stdio"]
+
+[language-server.jdtls]
+command = "jdtls"
+
+[language-server.kotlin-language-server]
+command = "kotlin-language-server"
+
+[language-server.jinja-lsp]
+command = "jinja-lsp"
+
+[language-server.docker-langserver]
+command = "docker-langserver"
+args = ["--stdio"]
+
+[language-server.csharp-ls]
+command = "csharp-ls"
+
+[language-server.sqls]
+command = "sqls"
+
+[language-server.lemminx]
+command = "lemminx"
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
+
+[language-server.pylsp]
+command = "pylsp"
+
+# Language Configurations
+
+# JavaScript
 [[language]]
-name = "css"
-file-types = ["css"]
-language-servers = ["vscode-css-languageserver"]
+name = "javascript"
+file-types = ["js", "jsx", "mjs", "cjs"]
+language-servers = ["typescript-language-server", "emmet-ls"]
 auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
 
-[language.formatter]
-command = "npx"
-args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+# TypeScript
+[[language]]
+name = "typescript"
+file-types = ["ts", "tsx"]
+language-servers = ["typescript-language-server", "emmet-ls"]
+auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
 
-# HTML Config
+# HTML
 [[language]]
 name = "html"
 file-types = ["html", "htm"]
-language-servers = ["vscode-html-languageserver"]
+language-servers = [
+  "vscode-html-languageserver",
+  "emmet-ls",
+  "tailwindcss-language-server",
+]
 auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
 
-[language.formatter]
-command = "npx"
-args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+# CSS/SCSS
+[[language]]
+name = "css"
+file-types = ["css", "scss"]
+language-servers = ["vscode-css-languageserver", "emmet-ls"]
+auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
 
-# JSON Config
+# JSON
 [[language]]
 name = "json"
-file-types = ["json"]
+file-types = ["json", "jsonc"]
 language-servers = ["vscode-json-languageserver"]
 auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
 
-[language.formatter]
-command = "npx"
-args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+# YAML
+[[language]]
+name = "yaml"
+file-types = ["yaml", "yml", "docker-compose.yml"]
+language-servers = ["yaml-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
 
-# Markdown Config
+# Markdown
 [[language]]
 name = "markdown"
 scope = "source.markdown"
@@ -39,34 +139,80 @@ file-types = ["md", "markdown"]
 comment-tokens = ["<!--", "-->"]
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
 
-[language.formatter]
-command = "npx"
-args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
-
-# Rust Config
-[[language]]
-name = "rust"
-auto-format = true
-
-[language.formatter]
-command = "rustfmt"
-args = ["--emit", "stdout"]
-
-# TOML Config
+# TOML
 [[language]]
 name = "toml"
+file-types = ["toml"]
+language-servers = ["taplo"]
 auto-format = true
 
-[language.formatter]
-command = "npx"
-args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
-
-# Typescript Config
+# Jinja
 [[language]]
-name = "typescript"
+name = "jinja"
+file-types = ["jinja", "j2", "jinja2"]
+language-servers = ["jinja-lsp"]
+auto-format = false
+
+# Java
+[[language]]
+name = "java"
+file-types = ["java"]
+language-servers = ["jdtls"]
 auto-format = true
 
-[language.formatter]
-command = "npx"
-args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+# Kotlin
+[[language]]
+name = "kotlin"
+file-types = ["kt", "kts"]
+language-servers = ["kotlin-language-server"]
+auto-format = false
+
+# Dockerfile
+[[language]]
+name = "dockerfile"
+file-types = ["Dockerfile", "dockerfile"]
+language-servers = ["docker-langserver"]
+auto-format = false
+
+# SQL
+[[language]]
+name = "sql"
+file-types = ["sql"]
+language-servers = ["sqls"]
+auto-format = false
+
+# XML
+[[language]]
+name = "xml"
+file-types = ["xml"]
+language-servers = ["lemminx"]
+auto-format = true
+formatter = { command = "xmllint", args = ["--format", "-"] }
+
+# C#
+[[language]]
+name = "c-sharp"
+file-types = ["cs"]
+language-servers = ["csharp-ls"]
+auto-format = false
+
+# Rust
+[[language]]
+name = "rust"
+file-types = ["rs"]
+language-servers = ["rust-analyzer"]
+auto-format = true
+formatter = { command = "rustfmt", args = ["--emit", "stdout"] }
+
+# Python
+[[language]]
+name = "python"
+file-types = ["py"]
+language-servers = ["pylsp"]
+auto-format = true
+formatter = { command = "black", args = ["-"] }
