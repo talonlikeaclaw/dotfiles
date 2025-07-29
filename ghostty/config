@@ -8,3 +8,4 @@ macos-titlebar-style = transparent
 window-decoration = true
 shell-integration = zsh
 confirm-close-surface = false
+app-notifications = no-clipboard-copy

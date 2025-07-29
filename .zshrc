@@ -5,6 +5,7 @@ export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
 export OLLAMA_HOST=0.0.0.0:11434
 export CUDA_VISIBLE_DEVICES=0
+export EDITOR=/usr/bin/helix
 
 # Zsh History
 HISTFILE=~/.zsh_history
@@ -29,10 +30,10 @@ plugins=(
 )
 
 # Configure tmux
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOCONNECT=true
-ZSH_TMUX_AUTOQUIT=false
-ZSH_TMUX_DEFAULT_SESSION_NAME="mainframe"
+# ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOCONNECT=true
+# ZSH_TMUX_AUTOQUIT=false
+# ZSH_TMUX_DEFAULT_SESSION_NAME="mainframe"
 
 # Configure eza
 zstyle ':omz:plugins:eza' dirs-first 'yes'
@@ -67,6 +68,7 @@ alias v='nvim'
 alias sh='history | fzf'
 alias szsh='source ~/.zshrc'
 alias y='yazi'
+alias h='helix'
 
 # Intialize tools
 eval "$(starship init zsh)"
@@ -75,3 +77,4 @@ eval "$(zoxide init zsh)"
 # Clear screen and run neofetch at the end
 clear
 fastfetch
+export PATH="$HOME/.npm-global/bin:$PATH"
