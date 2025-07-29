@@ -1,3 +1,14 @@
+# CSS Config
+[[language]]
+name = "css"
+file-types = ["css"]
+language-servers = ["vscode-css-languageserver"]
+auto-format = true
+
+[language.formatter]
+command = "npx"
+args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+
 # Markdown Config
 [[language]]
 name = "markdown"
