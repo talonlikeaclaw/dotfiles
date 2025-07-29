@@ -20,6 +20,15 @@ auto-format = true
 command = "rustfmt"
 args = ["--emit", "stdout"]
 
+# TOML Config
+[[language]]
+name = "toml"
+auto-format = true
+
+[language.formatter]
+command = "npx"
+args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+
 # Typescript Config
 [[language]]
 name = "typescript"
