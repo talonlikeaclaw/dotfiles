@@ -20,6 +20,17 @@ auto-format = true
 command = "npx"
 args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
 
+# JSON Config
+[[language]]
+name = "json"
+file-types = ["json"]
+language-servers = ["vscode-json-languageserver"]
+auto-format = true
+
+[language.formatter]
+command = "npx"
+args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+
 # Markdown Config
 [[language]]
 name = "markdown"
