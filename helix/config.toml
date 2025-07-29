@@ -5,6 +5,7 @@ auto-completion = true
 auto-save = true
 bufferline = "multiple"
 color-modes = true
+continue-comments = false
 cursorline = true
 line-number = "relative"
 true-color = true
