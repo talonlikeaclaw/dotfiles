@@ -9,6 +9,17 @@ auto-format = true
 command = "npx"
 args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
 
+# HTML Config
+[[language]]
+name = "html"
+file-types = ["html", "htm"]
+language-servers = ["vscode-html-languageserver"]
+auto-format = true
+
+[language.formatter]
+command = "npx"
+args = ["prettier", "--stdin-filepath", "%{buffer_name}"]
+
 # Markdown Config
 [[language]]
 name = "markdown"
