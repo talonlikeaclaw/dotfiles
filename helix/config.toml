@@ -1,12 +1,27 @@
 theme = "tokyonight"
 
 [editor]
+auto-completion = true
+auto-save = true
+bufferline = "multiple"
+color-modes = true
+cursorline = true
 line-number = "relative"
+true-color = true
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
 
 [keys.normal]
 C-l = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
@@ -17,3 +32,6 @@ C-y = [
   ':open %sh{cat /tmp/unique-file}',
   ':redraw',
 ]
+
+[keys.insert]
+h = { h = "normal_mode" }
