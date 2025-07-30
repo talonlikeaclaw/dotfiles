@@ -83,6 +83,17 @@ formatter = { command = "prettier", args = [
   "%{buffer_name}",
 ] }
 
+# TSX / JSX (React TSX files)
+[[language]]
+name = "tsx"
+file-types = ["tsx"]
+language-servers = ["typescript-language-server", "emmet-ls"]
+auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
+
 # HTML
 [[language]]
 name = "html"
