@@ -6,6 +6,7 @@ export PATH="$DOTNET_ROOT:$PATH"
 export OLLAMA_HOST=0.0.0.0:11434
 export CUDA_VISIBLE_DEVICES=0
 export EDITOR=/usr/bin/helix
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Zsh History
 HISTFILE=~/.zsh_history

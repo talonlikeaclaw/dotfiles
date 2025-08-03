@@ -59,6 +59,9 @@ args = ["lsp", "stdio"]
 [language-server.pylsp]
 command = "pylsp"
 
+[language-server.gopls]
+command = "gopls"
+
 # Language Configurations
 
 # JavaScript
@@ -227,3 +230,14 @@ file-types = ["py"]
 language-servers = ["pylsp"]
 auto-format = true
 formatter = { command = "black", args = ["-"] }
+
+# Golang
+[[language]]
+name = "go"
+file-types = ["go"]
+language-servers = ["gopls"]
+auto-format = true
+
+[language.formatter]
+command = "goimports"
+args = ["-w", "-"]
