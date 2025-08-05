@@ -33,6 +33,7 @@ C-y = [
   ':open %sh{cat /tmp/unique-file}',
   ':redraw',
 ]
+C-r = [":reload-all", ":config-reload"]
 
 [keys.insert]
 h = { h = "normal_mode" }
