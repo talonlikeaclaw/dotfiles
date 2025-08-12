@@ -7,6 +7,10 @@ export OLLAMA_HOST=0.0.0.0:11434
 export CUDA_VISIBLE_DEVICES=0
 export EDITOR=/usr/bin/helix
 export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$PATH:/home/talon/.lmstudio/bin"
+export PATH=/opt/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 # Zsh History
 HISTFILE=~/.zsh_history
@@ -77,4 +81,3 @@ eval "$(zoxide init zsh)"
 # Clear screen and run neofetch at the end
 clear
 fastfetch
-export PATH="$HOME/.npm-global/bin:$PATH"
