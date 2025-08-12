@@ -126,7 +126,7 @@ formatter = { command = "prettier", args = [
 # JSON
 [[language]]
 name = "json"
-file-types = ["json", "jsonc"]
+file-types = ["json", "jsonc", "jsonl"]
 language-servers = ["vscode-json-languageserver"]
 auto-format = true
 formatter = { command = "prettier", args = [
