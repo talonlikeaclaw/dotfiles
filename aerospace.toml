@@ -70,64 +70,42 @@ outer.right = 7
 # alt-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-alt-period = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
+alt-h = 'layout tiles horizontal vertical'
+alt-a = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+alt-y = 'focus left'
+alt-e = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
-alt-1 = 'workspace workspace-1'
-alt-2 = 'workspace workspace-2'
-alt-3 = 'workspace workspace-3'
-alt-4 = 'workspace workspace-4'
-alt-5 = 'workspace workspace-5'
-alt-a = 'workspace ableton'
-alt-b = 'workspace browser'
-alt-c = 'workspace code'
-alt-d = 'workspace database'
-alt-f = 'workspace finder'
-alt-g = 'workspace gpt'
-alt-m = 'workspace music'
-alt-n = 'workspace notes'
-alt-o = 'workspace obsidian'
-alt-p = 'workspace productivity'
-alt-r = 'workspace reader'
-alt-s = 'workspace safari'
-alt-t = 'workspace terminal'
-alt-z = 'workspace zen'
+alt-1 = 'workspace browse'
+alt-2 = 'workspace prompt'
+alt-3 = 'workspace develop'
+alt-4 = 'workspace research'
+alt-5 = 'workspace write'
+alt-6 = 'workspace vibe'
+alt-7 = 'workspace plan'
+alt-8 = 'workspace create'
+alt-9 = 'workspace communicate'
+alt-0 = 'workspace listen'
 
-alt-shift-1 = 'move-node-to-workspace workspace-1'
-alt-shift-2 = 'move-node-to-workspace workspace-2'
-alt-shift-3 = 'move-node-to-workspace workspace-3'
-alt-shift-4 = 'move-node-to-workspace workspace-4'
-alt-shift-5 = 'move-node-to-workspace workspace-5'
-alt-shift-a = 'move-node-to-workspace ableton'
-alt-shift-b = 'move-node-to-workspace brave'
-alt-shift-c = 'move-node-to-workspace code'
-alt-shift-d = 'move-node-to-workspace database'
-alt-shift-f = 'move-node-to-workspace finder'
-alt-shift-g = 'move-node-to-workspace gpt'
-alt-shift-m = 'move-node-to-workspace music'
-alt-shift-n = 'move-node-to-workspace notes'
-alt-shift-o = 'move-node-to-workspace obsidian'
-alt-shift-p = 'move-node-to-workspace productivity'
-alt-shift-r = 'move-node-to-workspace reader'
-alt-shift-s = 'move-node-to-workspace safari'
-alt-shift-t = 'move-node-to-workspace terminal'
-alt-shift-z = 'move-node-to-workspace zen'
+alt-shift-1 = 'move-node-to-workspace browse'
+alt-shift-2 = 'move-node-to-workspace prompt'
+alt-shift-3 = 'move-node-to-workspace develop'
+alt-shift-4 = 'move-node-to-workspace research'
+alt-shift-5 = 'move-node-to-workspace write'
+alt-shift-6 = 'move-node-to-workspace vibe'
+alt-shift-7 = 'move-node-to-workspace plan'
+alt-shift-8 = 'move-node-to-workspace create'
+alt-shift-9 = 'move-node-to-workspace communicate'
+alt-shift-0 = 'move-node-to-workspace listen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -147,75 +125,71 @@ f = [
 ] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+alt-shift-y = ['join-with left', 'mode main']
+alt-shift-h = ['join-with down', 'mode main']
+alt-shift-a = ['join-with up', 'mode main']
+alt-shift-e = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'com.ableton.live'
-run = 'move-node-to-workspace ableton'
+run = 'move-node-to-workspace create'
 
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser'
-run = 'move-node-to-workspace brave'
+run = 'move-node-to-workspace browse'
 
 [[on-window-detected]]
 if.app-id = 'com.neovide.neovide'
-run = 'move-node-to-workspace code'
+run = 'move-node-to-workspace develop'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace code'
+run = 'move-node-to-workspace develop'
 
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
-run = 'move-node-to-workspace code'
+run = 'move-node-to-workspace develop'
 
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.datagrip'
-run = 'move-node-to-workspace database'
+run = 'move-node-to-workspace develop'
 
 [[on-window-detected]]
 if.app-id = 'com.openai.chat'
-run = 'move-node-to-workspace gpt'
+run = 'move-node-to-workspace vibe'
 
 [[on-window-detected]]
 if.app-id = 'com.tidal.desktop'
-run = 'move-node-to-workspace music'
+run = 'move-node-to-workspace listen'
 
 [[on-window-detected]]
 if.app-id = 'come.apple.Notes'
-run = 'move-node-to-workspace notes'
+run = 'move-node-to-workspace write'
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace obsidian'
+run = 'move-node-to-workspace research'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
-run = 'move-node-to-workspace productivity'
+run = 'move-node-to-workspace plan'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.reminders'
-run = 'move-node-to-workspace productivity'
-
-[[on-window-detected]]
-if.app-id = 'io.raindrop.macapp'
-run = 'move-node-to-workspace productivity'
+run = 'move-node-to-workspace plan'
 
 [[on-window-detected]]
 if.app-id = 'info.sioyek.sioyek'
-run = 'move-node-to-workspace reader'
+run = 'move-node-to-workspace research'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
-run = 'move-node-to-workspace safari'
+run = 'move-node-to-workspace browse'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = 'move-node-to-workspace terminal'
+run = 'move-node-to-workspace prompt'
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
-run = 'move-node-to-workspace zen'
+run = 'move-node-to-workspace browse'
