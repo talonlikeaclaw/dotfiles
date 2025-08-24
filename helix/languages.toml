@@ -59,6 +59,9 @@ args = ["lsp", "stdio"]
 [language-server.pylsp]
 command = "pylsp"
 
+[language-server.gopls]
+command = "gopls"
+
 # Language Configurations
 
 # JavaScript
@@ -76,6 +79,17 @@ formatter = { command = "prettier", args = [
 [[language]]
 name = "typescript"
 file-types = ["ts", "tsx"]
+language-servers = ["typescript-language-server", "emmet-ls"]
+auto-format = true
+formatter = { command = "prettier", args = [
+  "--stdin-filepath",
+  "%{buffer_name}",
+] }
+
+# TSX / JSX (React TSX files)
+[[language]]
+name = "tsx"
+file-types = ["tsx"]
 language-servers = ["typescript-language-server", "emmet-ls"]
 auto-format = true
 formatter = { command = "prettier", args = [
@@ -112,7 +126,7 @@ formatter = { command = "prettier", args = [
 # JSON
 [[language]]
 name = "json"
-file-types = ["json", "jsonc"]
+file-types = ["json", "jsonc", "jsonl"]
 language-servers = ["vscode-json-languageserver"]
 auto-format = true
 formatter = { command = "prettier", args = [
@@ -216,3 +230,14 @@ file-types = ["py"]
 language-servers = ["pylsp"]
 auto-format = true
 formatter = { command = "black", args = ["-"] }
+
+# Golang
+[[language]]
+name = "go"
+file-types = ["go"]
+language-servers = ["gopls"]
+auto-format = true
+
+[language.formatter]
+command = "goimports"
+args = ["-w", "-"]

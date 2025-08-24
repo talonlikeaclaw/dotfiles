@@ -1,11 +1,18 @@
 # Export paths
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$PATH:/home/talon/.lmstudio/bin"
+export PATH=/opt/cuda/bin:$PATH
+export PATH="$DOTNET_ROOT:$PATH"
+
+# Export environment variables
 export ZSH="$HOME/.oh-my-zsh"
 export DOTNET_ROOT="/usr/local/share/dotnet"
-export PATH="$DOTNET_ROOT:$PATH"
 export OLLAMA_HOST=0.0.0.0:11434
 export CUDA_VISIBLE_DEVICES=0
 export EDITOR=/usr/bin/helix
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 # Zsh History
 HISTFILE=~/.zsh_history
@@ -30,10 +37,10 @@ plugins=(
 )
 
 # Configure tmux
-# ZSH_TMUX_AUTOSTART=true
-# ZSH_TMUX_AUTOCONNECT=true
-# ZSH_TMUX_AUTOQUIT=false
-# ZSH_TMUX_DEFAULT_SESSION_NAME="mainframe"
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=true
+ZSH_TMUX_AUTOQUIT=false
+ZSH_TMUX_DEFAULT_SESSION_NAME="mainframe"
 
 # Configure eza
 zstyle ':omz:plugins:eza' dirs-first 'yes'
@@ -65,7 +72,6 @@ alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t '
 alias r='ranger'
 alias v='nvim'
-alias sh='history | fzf'
 alias szsh='source ~/.zshrc'
 alias y='yazi'
 alias h='helix'
@@ -77,4 +83,3 @@ eval "$(zoxide init zsh)"
 # Clear screen and run neofetch at the end
 clear
 fastfetch
-export PATH="$HOME/.npm-global/bin:$PATH"
