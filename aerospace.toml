@@ -88,24 +88,24 @@ alt-shift-equal = 'resize smart +50'
 alt-1 = 'workspace browse'
 alt-2 = 'workspace prompt'
 alt-3 = 'workspace develop'
-alt-4 = 'workspace research'
+alt-4 = 'workspace listen'
 alt-5 = 'workspace write'
 alt-6 = 'workspace vibe'
 alt-7 = 'workspace plan'
 alt-8 = 'workspace create'
 alt-9 = 'workspace communicate'
-alt-0 = 'workspace listen'
+alt-0 = 'workspace research'
 
 alt-shift-1 = 'move-node-to-workspace browse'
 alt-shift-2 = 'move-node-to-workspace prompt'
 alt-shift-3 = 'move-node-to-workspace develop'
-alt-shift-4 = 'move-node-to-workspace research'
+alt-shift-4 = 'move-node-to-workspace listen'
 alt-shift-5 = 'move-node-to-workspace write'
 alt-shift-6 = 'move-node-to-workspace vibe'
 alt-shift-7 = 'move-node-to-workspace plan'
 alt-shift-8 = 'move-node-to-workspace create'
 alt-shift-9 = 'move-node-to-workspace communicate'
-alt-shift-0 = 'move-node-to-workspace listen'
+alt-shift-0 = 'move-node-to-workspace research'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -192,4 +192,8 @@ run = 'move-node-to-workspace prompt'
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace browse'
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace browse'
