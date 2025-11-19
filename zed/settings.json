@@ -15,8 +15,16 @@
             "show_edit_predictions": true
         }
     },
-    "theme": "Catppuccin Mocha (Blur)",
-    "icon_theme": "Catppuccin Frappé",
+    "theme": {
+        "mode": "system",
+        "light": "Ayu Light",
+        "dark": "Tokyo Night"
+    },
+    "icon_theme": {
+        "mode": "system",
+        "light": "Catppuccin Latte",
+        "dark": "Catppuccin Mocha"
+    },
     "base_keymap": "VSCode",
     "features": {
         "edit_prediction_provider": "zed"
@@ -25,12 +33,12 @@
         "mode": "subtle"
     },
     "buffer_font_family": "Maple Mono NF",
-    "buffer_font_size": 14,
-    "buffer_font_weight": 400,
-    "buffer_line_height": "comfortable",
+    "buffer_font_size": 13.0,
+    "buffer_font_weight": 400.0,
+    "buffer_line_height": "standard",
     "ui_font_family": "Maple Mono NF",
-    "ui_font_size": 16,
-    "ui_font_weight": 400,
+    "ui_font_size": 14.0,
+    "ui_font_weight": 350.0,
     "tab_size": 4,
     "active_pane_modifiers": {
         "magnification": 1.0,
@@ -45,7 +53,6 @@
             "provider": "ollama",
             "model": "qwen3:14b"
         },
-        "version": "2"
     },
     "notification_panel": {
         "dock": "left"
@@ -67,7 +74,7 @@
     },
     "terminal": {
         "line_height": "standard",
-        "font_size": 13,
+        "font_size": 13.0,
         "detect_venv": {
             "on": {
                 "directories": [".env", "env", ".venv", "venv", ".venv*"],
@@ -84,7 +91,7 @@
         "diagnostics": false
     },
     "vim_mode": true,
-    "relative_line_numbers": true,
+    "relative_line_numbers": "enabled",
     "vertical_scroll_margin": 5,
     "autoscroll_on_clicks": true,
     "format_on_save": "off",
