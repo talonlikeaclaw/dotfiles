@@ -89,7 +89,7 @@ alt-1 = 'workspace browse'
 alt-2 = 'workspace prompt'
 alt-3 = 'workspace develop'
 alt-4 = 'workspace listen'
-alt-5 = 'workspace write'
+alt-5 = 'workspace organize'
 alt-6 = 'workspace vibe'
 alt-7 = 'workspace plan'
 alt-8 = 'workspace create'
@@ -100,7 +100,7 @@ alt-shift-1 = 'move-node-to-workspace browse'
 alt-shift-2 = 'move-node-to-workspace prompt'
 alt-shift-3 = 'move-node-to-workspace develop'
 alt-shift-4 = 'move-node-to-workspace listen'
-alt-shift-5 = 'move-node-to-workspace write'
+alt-shift-5 = 'move-node-to-workspace organize'
 alt-shift-6 = 'move-node-to-workspace vibe'
 alt-shift-7 = 'move-node-to-workspace plan'
 alt-shift-8 = 'move-node-to-workspace create'
@@ -120,8 +120,8 @@ esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 f = [
-  'layout floating tiling',
-  'mode main',
+	'layout floating tiling',
+	'mode main',
 ] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
@@ -188,6 +188,10 @@ run = 'move-node-to-workspace browse'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace prompt'
+
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
 run = 'move-node-to-workspace prompt'
 
 [[on-window-detected]]
