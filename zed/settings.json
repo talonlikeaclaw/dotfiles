@@ -43,16 +43,15 @@
     "edit_predictions": {
         "mode": "subtle"
     },
-    "buffer_font_family": "JetBrainsMono Nerd Font",
+    "buffer_font_family": "Maple Mono NF",
     "buffer_font_size": 14,
     "buffer_font_weight": 400,
     "buffer_line_height": "comfortable",
-    "ui_font_family": "JetBrainsMono Nerd Font",
+    "ui_font_family": "Maple Mono NF",
     "ui_font_size": 16,
     "ui_font_weight": 400,
     "tab_size": 4,
     "active_pane_modifiers": {
-        "magnification": 1.0,
         "border_size": 0.0,
         "inactive_opacity": 0.95
     },
