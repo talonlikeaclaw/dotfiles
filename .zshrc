@@ -17,24 +17,36 @@ export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 # Zsh History
 HISTFILE=~/.zsh_history
 
-# Add Oh My Zsh plugins
-plugins=(
-  eza
-  brew
-  ssh-agent
-  web-search
-  zoxide
-  starship
-  zsh-autosuggestions # Requires seperate install
-  copypath
-  copyfile
-  fzf
-  you-should-use # Requires seperate install
-  aliases
-  colored-man-pages
-  tmux
-  zsh-syntax-highlighting # Requires seperate install
-)
+# CONDITIONAL PLUGIN LOADING
+if [[ -z "$CONTAINER_ID" ]]; then
+    # Full plugin list for host
+    plugins=(
+      eza
+      brew
+      ssh-agent
+      web-search
+      zoxide
+      starship
+      zsh-autosuggestions
+      copypath
+      copyfile
+      fzf
+      you-should-use
+      aliases
+      colored-man-pages
+      tmux
+      zsh-syntax-highlighting
+    )
+else
+    # Minimal plugins for containers
+    plugins=(
+      git
+      aliases
+      colored-man-pages
+      copypath
+      copyfile
+    )
+fi
 
 # Configure tmux
 # ZSH_TMUX_AUTOSTART=true
@@ -58,13 +70,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Custom aliases
 alias c='clear'
-alias cat='bat -p'
-alias can='bat'
 alias lg='lazygit'
 alias n='clear ; fastfetch'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias py='python3'
-alias size="du -sh"
+alias size="du-sh"
 alias td='tmux detach'
 alias tn='tmux new-session -s '
 alias ta='tmux attach -t '
@@ -76,10 +86,24 @@ alias szsh='source ~/.zshrc'
 alias y='yazi'
 alias h='helix'
 
-# Intialize tools
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+# HOST-ONLY CONFIGURATION
+if [[ -z "$CONTAINER_ID" ]]; then
+    # Aliases that require host tools
+    alias cat='bat -p'
+    alias can='bat'
+    alias gptoss='llama-server -m ~/.local/share/llama-models/unsloth/gpt-oss-20b-Q4_K_M.gguf -c 60000 --gpu-layers 999 --parallel 2 --batch-size 512 --host 127.0.0.1 --port 8080'
+    
+    # Initialize tools
+    eval "$(starship init zsh)"
+    eval "$(zoxide init zsh)"
+    
+    # Clear screen and run fastfetch
+    clear
+    fastfetch
+else
+    # Container-friendly configuration
+    alias cat='cat'
 
-# Clear screen and run neofetch at the end
-clear
-fastfetch
+    # Simple prompt for containers
+    PROMPT='%F{yellow}%~%f on %F{cyan}${CONTAINER_ID}%f %# '
+fi
