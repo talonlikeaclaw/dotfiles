@@ -7,153 +7,154 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "languages": {
-        "Python": {
-            "show_edit_predictions": true
-        },
-        "CSharp": {
-            "show_edit_predictions": true
-        }
-    },
-    "theme": "Tokyo Night Storm",
-    "icon_theme": "Catppuccin Frappé",
-    "base_keymap": "VSCode",
-    "features": {
-        "edit_prediction_provider": "zed"
-    },
-    "edit_predictions": {
-        "mode": "subtle"
-    },
-    "buffer_font_family": "JetBrainsMono Nerd Font",
-    "buffer_font_size": 14,
-    "buffer_font_weight": 400,
-    "buffer_line_height": "comfortable",
-    "ui_font_family": "JetBrainsMono Nerd Font",
-    "ui_font_size": 16,
-    "ui_font_weight": 400,
-    "tab_size": 4,
-    "active_pane_modifiers": {
-        "magnification": 1.0,
-        "border_size": 0.0,
-        "inactive_opacity": 0.95
-    },
-    "agent": {
-        "default_profile": "ask",
-        "dock": "left",
-        "default_width": 420,
-        "default_model": {
-            "provider": "ollama",
-            "model": "qwen2.5-coder:7b"
-        },
-        "version": "2"
-    },
-    "notification_panel": {
-        "dock": "left"
-    },
-    "outline_panel": {
-        "dock": "right"
-    },
-    "project_panel": {
-        "indent_size": 12,
-        "dock": "right"
-    },
-    "tab_bar": {
-        "show": true,
-        "show_nav_history_buttons": false
-    },
-    "tabs": {
-        "file_icons": true,
-        "git_status": true
-    },
-    "terminal": {
-        "line_height": "standard",
-        "font_size": 13,
-        "detect_venv": {
-            "on": {
-                "directories": [".env", "env", ".venv", "venv", ".venv*"],
-                "activate_script": "default"
-            }
-        }
-    },
-    "journal": {
-        "path": "~/Documents/Obsidian",
-        "hour_format": "hour24"
-    },
-    "telemetry": {
-        "metrics": false,
-        "diagnostics": false
-    },
-    "vim_mode": true,
-    "relative_line_numbers": true,
-    "vertical_scroll_margin": 5,
-    "autoscroll_on_clicks": true,
-    "format_on_save": "off",
-    "restore_on_startup": "last_workspace",
-    "language_models": {
-        // "ollama": {
-        //     "api_url": "http://localhost:11434",
-        //     "available_models": [
-        //         {
-        //             "name": "gemma3:12b",
-        //             "display_name": "Gemma 3 12B",
-        //             "max_tokens": 32000
-        //         },
-        //         {
-        //             "name": "mistral-nemo:latest",
-        //             "display_name": "Mistral Nemo 12B",
-        //             "max_tokens": 32000
-        //         },
-        //         {
-        //             "name": "mistral-small3.1",
-        //             "display_name": "Mistral Small 24B",
-        //             "max_tokens": 16000
-        //         },
-        //         {
-        //             "name": "qwen2.5:latest",
-        //             "display_name": "Qwen 7B",
-        //             "max_tokens": 32000
-        //         },
-        //         {
-        //             "name": "qwen2.5:14b",
-        //             "display_name": "Qwen 14B",
-        //             "max_tokens": 32000
-        //         }
-        //     ]
-        // },
-        "ollama": {
-            "api_url": "http://192.168.0.143:11434",
-            "available_models": [
-                {
-                    "name": "qwen2.5-coder:7b",
-                    "display_name": "Qwen Coder 7B (PC)",
-                    "max_tokens": 32768,
-                    "supports_tools": true
-                }
-            ]
-        }
-    },
-    "auto_install_extensions": {
-        "basher": true,
-        "catppuccin-blur-plus": true,
-        "csharp": true,
-        "csv": true,
-        "docker-compose": true,
-        "dockerfile": true,
-        "emmet": true,
-        "env": true,
-        "html": true,
-        "java": true,
-        "jinja2": true,
-        "live-server": true,
-        "lue": true,
-        "pylsp": true,
-        "ruff": true,
-        "snippeets": true,
-        "sql": true,
-        "sqruff": true,
-        "tmux": true,
-        "tokyo-night": true,
-        "toml": true,
-        "xml": true
-    }
+	"hard_tabs": true,
+	"minimap": {
+		"show": "always"
+	},
+	"autosave": {
+		"after_delay": {
+			"milliseconds": 1000
+		}
+	},
+	"show_edit_predictions": false,
+	"collaboration_panel": {
+		"button": false,
+		"dock": "right"
+	},
+	"git_panel": {
+		"dock": "right"
+	},
+	"languages": {
+		"JavaScript": {
+			"formatter": {
+				"external": {
+					"command": "prettier",
+					"arguments": ["--stdin-filepath", "{buffer_path}"]
+				}
+			},
+			"format_on_save": "on"
+		},
+		"Python": {
+			"show_edit_predictions": true
+		},
+		"CSharp": {
+			"show_edit_predictions": true
+		}
+	},
+	"theme": {
+		"mode": "system",
+		"light": "Ayu Light",
+		"dark": "Catppuccin Macchiato"
+	},
+	"icon_theme": {
+		"mode": "system",
+		"light": "Catppuccin Latte",
+		"dark": "Catppuccin Mocha"
+	},
+	"base_keymap": "VSCode",
+	"features": {
+		"edit_prediction_provider": "zed"
+	},
+	"edit_predictions": {
+		"mode": "subtle"
+	},
+	"buffer_font_family": "Maple Mono NF",
+	"buffer_font_size": 14,
+	"buffer_font_weight": 400,
+	"buffer_line_height": "comfortable",
+	"ui_font_family": "Maple Mono NF",
+	"ui_font_size": 16,
+	"ui_font_weight": 400,
+	"tab_size": 2,
+	"active_pane_modifiers": {
+		"border_size": 0.0,
+		"inactive_opacity": 0.95
+	},
+	"agent": {
+		"button": true,
+		"default_profile": "ask",
+		"default_width": 420,
+		"default_model": {
+			"provider": "ollama",
+			"model": "qwen2.5-coder:7b"
+		}
+	},
+	"notification_panel": {
+		"button": false,
+		"dock": "right"
+	},
+	"outline_panel": {
+		"dock": "right"
+	},
+	"project_panel": {
+		"sticky_scroll": true,
+		"scrollbar": {
+			"show": "auto"
+		},
+		"starts_open": true,
+		"auto_reveal_entries": true,
+		"git_status": true,
+		"folder_icons": true,
+		"file_icons": true,
+		"entry_spacing": "comfortable",
+		"default_width": 240.0,
+		"indent_size": 12,
+		"dock": "left"
+	},
+	"tab_bar": {
+		"show": true,
+		"show_nav_history_buttons": false
+	},
+	"tabs": {
+		"file_icons": true,
+		"git_status": true
+	},
+	"terminal": {
+		"line_height": "standard",
+		"font_size": 13,
+		"detect_venv": {
+			"on": {
+				"directories": [".env", "env", ".venv", "venv", ".venv*"],
+				"activate_script": "default"
+			}
+		}
+	},
+	"journal": {
+		"path": "~/Documents/Obsidian",
+		"hour_format": "hour24"
+	},
+	"telemetry": {
+		"metrics": false,
+		"diagnostics": false
+	},
+	"vim_mode": true,
+	"relative_line_numbers": "enabled",
+	"vertical_scroll_margin": 5,
+	"autoscroll_on_clicks": true,
+	"format_on_save": "off",
+	"restore_on_startup": "last_workspace",
+	"auto_install_extensions": {
+		"basher": true,
+		"catppuccin-blur-plus": true,
+		"csharp": true,
+		"csv": true,
+		"docker-compose": true,
+		"dockerfile": true,
+		"emmet": true,
+		"env": true,
+		"html": true,
+		"java": true,
+		"jinja2": true,
+		"live-server": true,
+		"lue": true,
+		"pylsp": true,
+		"ruff": true,
+		"snippeets": true,
+		"sql": true,
+		"sqruff": true,
+		"tmux": true,
+		"tokyo-night": true,
+		"toml": true,
+		"xml": true
+	}
 }
