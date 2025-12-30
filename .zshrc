@@ -1,17 +1,12 @@
 # Export paths
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$(go env GOPATH)/bin"
-export PATH="$HOME/.npm-global/bin:$PATH"
-export PATH="$PATH:/home/talon/.lmstudio/bin"
 export PATH=/opt/cuda/bin:$PATH
-export PATH="$DOTNET_ROOT:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 # Export environment variables
 export ZSH="$HOME/.oh-my-zsh"
-export DOTNET_ROOT="/usr/local/share/dotnet"
-export OLLAMA_HOST=0.0.0.0:11434
 export CUDA_VISIBLE_DEVICES=0
-export EDITOR=/usr/bin/helix
+export EDITOR=/usr/bin/nvim
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 # Zsh History
