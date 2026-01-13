@@ -29,7 +29,7 @@
     "theme": {
         "mode": "system",
         "light": "Ayu Light",
-        "dark": "Catppuccin Mocha (Blue Blur+)"
+        "dark": "Catppuccin Mocha"
     },
     "icon_theme": {
         "mode": "system",
