@@ -1,2 +1,2 @@
-require 'talonvim.core'
-vim.cmd [[colorscheme tokyonight]]
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
