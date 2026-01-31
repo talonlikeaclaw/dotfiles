@@ -82,3 +82,11 @@ eval "$(zoxide init zsh)"
 # Clear screen and run neofetch at the end
 clear
 fastfetch
+
+# pnpm
+export PNPM_HOME="/Users/talon/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
