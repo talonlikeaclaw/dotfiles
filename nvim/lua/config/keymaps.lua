@@ -2,9 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- Exit nromal mode via "jj"
-vim.keymap.set("i", "jj", "<Esc>", { silent = true })
+vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>", { desc = "Save File" })
+vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit Insert Mode" })
 
--- Disable Ctrl + s to save and switch to "<leader>fs"
-vim.keymap.del("n", "<C-s>")
-vim.keymap.set("n", "<leader>fs", ":w<CR>", { desc = "Save file" })
+-- Disable default C-s save (LazyVim sets it in n, i, x, s modes)
+vim.keymap.del({ "n", "i", "x", "s" }, "<C-s>")
