@@ -104,3 +104,11 @@ else
     # Simple prompt for containers
     PROMPT='%F{yellow}%~%f on %F{cyan}${CONTAINER_ID}%f %# '
 fi
+
+# pnpm
+export PNPM_HOME="/home/talon/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
