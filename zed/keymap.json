@@ -90,7 +90,7 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       // Refactoring
-      "space c r ": "editor::Rename",
+      "space c r": "editor::Rename",
       // Chat with AI
       "space a a": "agent::ToggleFocus",
       "ctrl-\\": "workspace::ToggleRightDock",
