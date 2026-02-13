@@ -12,9 +12,16 @@
       "j j": "vim::SwitchToNormalMode",
     },
   },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-j": "editor::ConfirmCompletion",
+      "enter": null,
+    },
+  },
   // Window's navigation
   {
-    "context": "Dock || Terminal || Editor",
+    "context": "(Dock || Terminal || Editor) && !(Editor && showing_completions)",
     "bindings": {
       // Window's motions
       "ctrl-h": "workspace::ActivatePaneLeft",
