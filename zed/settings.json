@@ -3,8 +3,23 @@
     {
       "host": "dawson-vm",
       "args": [],
-      "projects": []
-    }
+      "projects": [
+        {
+          "paths": ["/home/talon"],
+        },
+        {
+          "paths": ["/home/talon/dev"],
+        },
+        {
+          "paths": ["/home/talon/dev/520-project"],
+        },
+      ],
+    },
+    {
+      "host": "dawson-vm",
+      "args": [],
+      "projects": [],
+    },
   ],
   "git": {
     "path_style": "file_name_first",
@@ -128,7 +143,7 @@
     },
     "scroll_multiplier": 1.0,
     "max_scroll_history_lines": 10000,
-    "default_height": 320.0,
+    "default_height": 250.0,
     "default_width": 640.0,
     "keep_selection_on_copy": true,
     "copy_on_select": false,
@@ -139,7 +154,7 @@
     "cursor_shape": "block",
     "font_weight": 400.0,
     "font_family": "Maple Mono NF",
-    "font_size": 15.0,
+    "font_size": 13.0,
     "dock": "bottom",
     "button": true,
   },
@@ -176,7 +191,7 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 230.0,
+    "default_width": 150.0,
     "dock": "right",
     "button": true,
   },
@@ -389,13 +404,13 @@
   "multi_cursor_modifier": "alt",
   "text_rendering_mode": "platform_default",
   "agent_buffer_font_size": 15.0,
-  "agent_ui_font_size": 15.0,
+  "agent_ui_font_size": 13.0,
   "ui_font_weight": 400.0,
-  "ui_font_size": 15.0,
+  "ui_font_size": 13.0,
   "ui_font_family": "Maple Mono NF",
   "buffer_line_height": "comfortable",
   "buffer_font_weight": 400.0,
-  "buffer_font_size": 15.0,
+  "buffer_font_size": 14.0,
   "buffer_font_family": "Maple Mono NF",
   "auto_update": true,
   "telemetry": {
@@ -413,5 +428,5 @@
   "on_last_window_closed": "quit_app",
   "when_closing_with_no_tabs": "close_window",
   "icon_theme": "Catppuccin Macchiato",
-  "theme": "Everforest Dark Hard (blur)",
+  "theme": "Catppuccin Macchiato",
 }
