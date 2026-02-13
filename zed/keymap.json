@@ -238,4 +238,10 @@
       "b": "vim::AnyBrackets",
     },
   },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-/": "workspace::ToggleBottomDock",
+    },
+  },
 ]
