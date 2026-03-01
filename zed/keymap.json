@@ -15,8 +15,9 @@
   {
     "context": "Editor && showing_completions",
     "bindings": {
-      "ctrl-j": "editor::ConfirmCompletion",
-      "enter": null,
+      "ctrl-j": ["workspace::SendKeystrokes", "ctrl-n"],
+      "ctrl-k": ["workspace::SendKeystrokes", "ctrl-p"],
+      "enter": "editor::ConfirmCompletion",
     },
   },
   // Window's navigation
