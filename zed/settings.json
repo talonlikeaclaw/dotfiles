@@ -371,7 +371,7 @@
   "expand_excerpt_lines": 5,
   "double_click_in_multibuffer": "select",
   "which_key": {
-    "delay_ms": 100,
+    "delay_ms": 1500,
     "enabled": true,
   },
   "helix_mode": false,
