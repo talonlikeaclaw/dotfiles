@@ -1,4 +1,9 @@
 {
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
   "lsp": {
     "vtsls": {
       "settings": {
@@ -312,7 +317,7 @@
   "preferred_line_length": 80,
   "soft_wrap": "none",
   "auto_indent_on_paste": true,
-  "auto_indent": true,
+  "auto_indent": "syntax_aware",
   "hard_tabs": false,
   "tab_size": 2,
   "vim": {
