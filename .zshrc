@@ -1,5 +1,6 @@
 # Export paths
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/opt/cuda/bin:$PATH
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
@@ -48,7 +49,7 @@ fi
 # ZSH_TMUX_AUTOSTART=true
 # ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_AUTOQUIT=false
-ZSH_TMUX_DEFAULT_SESSION_NAME="0-mainframe"
+ZSH_TMUX_DEFAULT_SESSION_NAME="mainframe"
 
 # Configure eza
 zstyle ':omz:plugins:eza' dirs-first 'yes'
@@ -112,3 +113,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export PATH="$HOME/code/local-llamas/llama.cpp/build/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/code/local-llamas/llama.cpp/build/bin:$LD_LIBRARY_PATH"
