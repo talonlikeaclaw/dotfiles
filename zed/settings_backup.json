@@ -39,7 +39,7 @@
     "enabled_in_text_threads": false,
   },
   "show_edit_predictions": false,
-  "disable_ai": true,
+  "disable_ai": false,
   "agent": {
     "default_height": 320.0,
     "default_width": 640.0,
@@ -285,7 +285,7 @@
   "preferred_line_length": 80,
   "soft_wrap": "none",
   "auto_indent_on_paste": true,
-  "auto_indent": "syntax_aware",
+  "auto_indent": true,
   "hard_tabs": false,
   "tab_size": 2,
   "vim": {
@@ -310,7 +310,7 @@
     "breadcrumbs": true,
   },
   "minimap": {
-    "max_width_columns": 42,
+    "max_width_columns": 80,
     "current_line_highlight": "all",
     "thumb_border": "left_open",
     "thumb": "always",

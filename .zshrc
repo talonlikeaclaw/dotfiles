@@ -1,13 +1,17 @@
 # Export paths
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/opt/cuda/bin:$PATH
 export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/.deno/bin:$PATH"
 
 # Export environment variables
 export ZSH="$HOME/.oh-my-zsh"
 export CUDA_VISIBLE_DEVICES=0
 export EDITOR=/usr/bin/nvim
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+export OLLAMA_FLASH_ATTENTION=1
+export OLLAMA_KV_CACHE_TYPE=bf16
 
 # Zsh History
 HISTFILE=~/.zsh_history
@@ -75,6 +79,7 @@ alias tn='tmux new-session -s '
 alias ta='tmux attach -t '
 alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t '
+alias tm='task_manager'
 alias r='ranger'
 alias v='nvim'
 alias szsh='source ~/.zshrc'
@@ -102,3 +107,16 @@ else
     # Simple prompt for containers
     PROMPT='%F{yellow}%~%f on %F{cyan}${CONTAINER_ID}%f %# '
 fi
+
+# pnpm
+export PNPM_HOME="/home/talon/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="$HOME/code/local-llamas/llama.cpp/build/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/code/local-llamas/llama.cpp/build/bin:$LD_LIBRARY_PATH"
+
+# television shell integration
+eval "$(tv init zsh)"

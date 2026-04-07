@@ -1,10 +1,12 @@
 font-family = Maple Mono NF
 font-size = 12
-theme = tokyonight
-background-opacity = 0.80
+theme = Catppuccin Mocha
+background-opacity = 0.90
 background-blur-radius = 20
 mouse-hide-while-typing = true
 macos-titlebar-style = transparent
+clipboard-read = allow
+clipboard-write = allow
 window-decoration = true
 shell-integration = zsh
 confirm-close-surface = false
