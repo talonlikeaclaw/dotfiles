@@ -4,12 +4,12 @@ set -e
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 OS=$(uname)
 
-SHARED=(bat fastfetch ghostty gitmux helix kitty nvim starship tmux zed zsh)
+SHARED=(bat fastfetch ghostty gitmux helix kitty nvim starship tmux)
 
 if [[ "$OS" == "Darwin" ]]; then
-    PLATFORM=(ghostty-mac aerospace)
+    PLATFORM=(aerospace zed-mac zsh-mac)
 elif [[ "$OS" == "Linux" ]]; then
-    PLATFORM=(ghostty-linux)
+    PLATFORM=(zed zsh)
 fi
 
 cd "$DOTFILES"
