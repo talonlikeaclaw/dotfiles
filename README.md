@@ -1,27 +1,56 @@
-# Talon's Linux Dotfiles
+# Talon's Dotfiles
 
-This is where I keep track of my personal configuration files for the plethora of useful applications I use daily.
+Personal configuration files for macOS and EndeavourOS (Arch), managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
-Originally, the repo was primarily tracking my MacBook configs on the `main` branch. However, I have since shifted to maintaining two branches for both macOS and Linux.
+## Setup
 
-From this point forward:
+```bash
+git clone https://github.com/talonlikeaclaw/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
+```
 
-- The `main` branch will track my Linux configs.
-- The `endeavour` branch will track my most recent Arch (btw) configs.
-- The `macbook` branch will track my MacOS configs.
+`install.sh` detects the OS and stows the right packages automatically.
 
-Currently, this repo contains my configuration files for the following:
+## Structure
 
-- **Bat**: A `cat` replacement
-- **Fish**: A Unix-like shell designed for usability and interactivity
-- **Ghostty**: A GPU-accelerated terminal emulator with simple configuration
-- **FastFetch**: A beautiful ASCII art output with system information (config inspired by [this post](https://old.reddit.com/r/GarudaLinux/comments/1dcq0dl/making_fastfetch_more_beautiful_linux/))
-- **Helix**: A post-modern modal text editor written in Rust.
-- **Starship**: A highly customizable prompt customizer with a beautiful design
-- **Tmux**: An amazing terminal multiplexer that maintains persistent sessions after rebooting
-- **Zed**: An awesome open-source AI-integrated editor written in Rust, usable with local Ollama LLM models
-- **Zellij**: A terminal multiplexor, also written in Rust.
+Each tool is a Stow package that mirrors the target directory tree from `$HOME`. Running `./install.sh` creates the appropriate symlinks.
 
-I also previously maintained a Neovim config in this repo but have since moved it to [another repository](https://github.com/talonlikeaclaw/talonvim).
+### Shared packages (all platforms)
 
-If you encounter any issues or have suggestions for improvement, please feel free to open an issue.
+| Package | Description |
+|---|---|
+| `bat` | `cat` replacement |
+| `fastfetch` | System info display |
+| `ghostty` | GPU-accelerated terminal emulator |
+| `gitmux` | Git status in tmux status bar |
+| `helix` | Modal text editor written in Rust |
+| `kitty` | Terminal emulator |
+| `nvim` | Neovim config |
+| `starship` | Shell prompt |
+| `tmux` | Terminal multiplexer |
+
+### Platform-specific packages
+
+| Package | Platform | Description |
+|---|---|---|
+| `zsh` | Linux | Zsh config |
+| `zed` | Linux | Zed editor config |
+| `zsh-mac` | macOS | Zsh config |
+| `zed-mac` | macOS | Zed editor config |
+| `aerospace` | macOS | Tiling window manager |
+
+### Archived (not stowed)
+
+Configs kept for reference in `archive/`: `fish`, `zellij`
+
+## Adding a new package
+
+1. Create a directory mirroring the target path, e.g. `myapp/.config/myapp/`
+2. Put your config files inside
+3. Add the package name to the appropriate array in `install.sh`
+4. Run `./install.sh`
+
+## Adding platform-specific config
+
+Create a `myapp-mac/` or `myapp-linux/` package with only the differing files, add it to the `PLATFORM` array in `install.sh`.
