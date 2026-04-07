@@ -117,3 +117,6 @@ esac
 # pnpm end
 export PATH="$HOME/code/local-llamas/llama.cpp/build/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/code/local-llamas/llama.cpp/build/bin:$LD_LIBRARY_PATH"
+
+# television shell integration
+eval "$(tv init zsh)"
