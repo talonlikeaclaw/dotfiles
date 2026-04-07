@@ -10,6 +10,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export CUDA_VISIBLE_DEVICES=0
 export EDITOR=/usr/bin/nvim
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+export OLLAMA_FLASH_ATTENTION=1
+export OLLAMA_KV_CACHE_TYPE=bf16
 
 # Zsh History
 HISTFILE=~/.zsh_history
