@@ -4,3 +4,4 @@ fish/conf.d/*
 !fish/conf.d/my_*.fish
 fish/fish_plugins
 fish/fish_variables
+**/.claude/
