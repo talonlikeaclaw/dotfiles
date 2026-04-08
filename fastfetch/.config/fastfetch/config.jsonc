@@ -3,16 +3,15 @@
     "logo": {
         "type": "file",
         "source": "~/.config/fastfetch/eagle.txt",
-        "position": "top",
         "color": {
-            "1": "38;2;148;228;213",
-            "2": "38;2;137;220;235",
-            "3": "38;2;116;199;236",
-            "4": "38;2;166;227;161"
+            "1": "38;2;166;227;161",
+            "2": "38;2;116;199;236",
+            "3": "38;2;137;220;235",
+            "4": "38;2;148;228;213"
         },
         "padding": {
-            "top": 1,
-            "left": 4
+            "top": 0,
+            "right": 4
         }
     },
     "display": {
@@ -20,17 +19,17 @@
     },
     "modules": [
         {
-            "type": "command",
-            "text": "h=$(date +%H); if [ $h -lt 12 ]; then echo 'good morning, talon ☀️'; elif [ $h -lt 17 ]; then echo 'good afternoon, talon ☁️'; else echo 'good evening, talon 🌙'; fi",
-            "key": " "
-        },
-        {
             "type": "title",
-            "format": "{#1}╭──────────── {#}{user-name-colored}{#1} ────────────╮"
+            "format": "{#1}╭───────────────────── {#}{user-name-colored}{#1} ─────────────────────╮"
         },
         {
             "type": "os",
             "key": "{#1}│ {#keys} OS",
+            "keyColor": "blue"
+        },
+        {
+            "type": "kernel",
+            "key": "{#1}│ {#keys} Kernel",
             "keyColor": "blue"
         },
         {
@@ -39,8 +38,28 @@
             "keyColor": "blue"
         },
         {
+            "type": "packages",
+            "key": "{#1}│ {#keys} Packages",
+            "keyColor": "blue"
+        },
+        {
             "type": "shell",
             "key": "{#1}│ {#keys} Shell",
+            "keyColor": "green"
+        },
+        {
+            "type": "terminal",
+            "key": "{#1}│ {#keys} Terminal",
+            "keyColor": "green"
+        },
+        {
+            "type": "de",
+            "key": "{#1}│ {#keys} DE",
+            "keyColor": "green"
+        },
+        {
+            "type": "wm",
+            "key": "{#1}│ {#keys} WM",
             "keyColor": "green"
         },
         {
@@ -77,7 +96,7 @@
         },
         {
             "type": "custom",
-            "format": "{#1}╰────────────────────────────────────╯"
+            "format": "{#1}╰─────────────────────────────────────────────────╯"
         }
     ]
 }
