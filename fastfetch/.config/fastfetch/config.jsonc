@@ -1,117 +1,83 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "type": "builtin",
-        "height": 15,
-        "width": 30,
+        "type": "file",
+        "source": "~/.config/fastfetch/eagle.txt",
+        "position": "top",
+        "color": {
+            "1": "38;2;148;228;213",
+            "2": "38;2;137;220;235",
+            "3": "38;2;116;199;236",
+            "4": "38;2;166;227;161"
+        },
         "padding": {
-            "top": 5,
-            "left": 3
+            "top": 1,
+            "left": 4
         }
     },
+    "display": {
+        "separator": " "
+    },
     "modules": [
-        "break",
         {
-            "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+            "type": "command",
+            "text": "h=$(date +%H); if [ $h -lt 12 ]; then echo 'good morning, talon ☀️'; elif [ $h -lt 17 ]; then echo 'good afternoon, talon ☁️'; else echo 'good evening, talon 🌙'; fi",
+            "key": " "
         },
         {
-            "type": "host",
-            "key": " PC",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "cpu",
-            "key": "│ ├",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "gpu",
-            "key": "│ ├󰍛",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "memory",
-            "key": "│ ├󰍛",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "disk",
-            "key": "└ └",
-            "keyColor": "magenta"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+            "type": "title",
+            "format": "{#1}╭──────────── {#}{user-name-colored}{#1} ────────────╮"
         },
         {
             "type": "os",
-            "key": " OS",
+            "key": "{#1}│ {#keys} OS",
             "keyColor": "blue"
         },
         {
-            "type": "kernel",
-            "key": "│ ├",
-            "keyColor": "blue"
-        },
-        {
-            "type": "bios",
-            "key": "│ ├",
-            "keyColor": "blue"
-        },
-        {
-            "type": "packages",
-            "key": "│ ├󰏖",
+            "type": "uptime",
+            "key": "{#1}│ {#keys} Uptime",
             "keyColor": "blue"
         },
         {
             "type": "shell",
-            "key": "└ └",
-            "keyColor": "blue"
-        },
-        "break",
-        {
-            "type": "de",
-            "key": " DE",
-            "keyColor": "red"
-        },
-        {
-            "type": "lm",
-            "key": "│ ├",
-            "keyColor": "red"
-        },
-        {
-            "type": "wm",
-            "key": "│ ├",
-            "keyColor": "red"
-        },
-        {
-            "type": "wmtheme",
-            "key": "│ ├󰉼",
-            "keyColor": "red"
-        },
-        {
-            "type": "terminal",
-            "key": "└ └",
-            "keyColor": "red"
+            "key": "{#1}│ {#keys} Shell",
+            "keyColor": "green"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+            "format": "{#1}│"
         },
-//        {
-//            "type": "colors"
-//        },
-
+        {
+            "type": "cpu",
+            "key": "{#1}│ {#keys} CPU",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "gpu",
+            "key": "{#1}│ {#keys} GPU",
+            "keyColor": "yellow",
+            "showErrors": false
+        },
+        {
+            "type": "memory",
+            "key": "{#1}│ {#keys} RAM",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "disk",
+            "key": "{#1}│ {#keys} Disk",
+            "keyColor": "yellow",
+            "folders": "/"
+        },
         {
             "type": "colors",
-            "paddingLeft": 2,
-            "symbol": "circle"
+            "key": "{#1}│",
+            "symbol": "circle",
+            "paddingLeft": 1
+        },
+        {
+            "type": "custom",
+            "format": "{#1}╰────────────────────────────────────╯"
         }
- 
     ]
 }
