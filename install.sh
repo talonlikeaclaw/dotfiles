@@ -14,6 +14,10 @@ fi
 
 cd "$DOTFILES"
 
+# Bootstrap git submodules (e.g. TPM)
+echo "Initializing submodules..."
+git submodule update --init --recursive
+
 for pkg in "${SHARED[@]}" "${PLATFORM[@]}"; do
     if [[ -d "$pkg" ]]; then
         echo "Stowing $pkg..."
