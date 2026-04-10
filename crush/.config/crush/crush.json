@@ -1,0 +1,41 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "tools": {
+    "ls": {},
+    "grep": {}
+  },
+  "providers": {
+    "local": {
+      "name": "llama.cpp (local)",
+      "base_url": "http://localhost:8080/v1",
+      "api_key": "none",
+      "type": "openai-compat",
+      "models": [
+        {
+          "id": "qwen3.5-4b",
+          "name": "Qwen3.5 4B Q4_K_XL",
+          "cost_per_1m_in": 0, "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0, "cost_per_1m_out_cached": 0,
+          "context_window": 131072, "default_max_tokens": 32768,
+          "can_reason": false, "supports_attachments": false, "options": {}
+        },
+        {
+          "id": "qwen3.5-9b",
+          "name": "Qwen3.5 9B Q8_0",
+          "cost_per_1m_in": 0, "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0, "cost_per_1m_out_cached": 0,
+          "context_window": 65536, "default_max_tokens": 32768,
+          "can_reason": true, "supports_attachments": false, "options": {}
+        },
+        {
+          "id": "qwen3.5-35b",
+          "name": "Qwen3.5 35B-A3B Q4_K_XL",
+          "cost_per_1m_in": 0, "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0, "cost_per_1m_out_cached": 0,
+          "context_window": 32768, "default_max_tokens": 32768,
+          "can_reason": true, "supports_attachments": false, "options": {}
+        }
+      ]
+    }
+  }
+}
