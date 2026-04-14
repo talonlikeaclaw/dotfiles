@@ -25,42 +25,34 @@
         {
             "type": "os",
             "key": "{#1}│ {#keys} OS",
-            "keyColor": "blue"
         },
         {
             "type": "kernel",
             "key": "{#1}│ {#keys} Kernel",
-            "keyColor": "blue"
         },
         {
             "type": "uptime",
             "key": "{#1}│ {#keys} Uptime",
-            "keyColor": "blue"
         },
         {
             "type": "packages",
             "key": "{#1}│ {#keys} Packages",
-            "keyColor": "blue"
         },
         {
             "type": "shell",
             "key": "{#1}│ {#keys} Shell",
-            "keyColor": "green"
         },
         {
             "type": "terminal",
             "key": "{#1}│ {#keys} Terminal",
-            "keyColor": "green"
         },
         {
             "type": "de",
             "key": "{#1}│ {#keys} DE",
-            "keyColor": "green"
         },
         {
             "type": "wm",
             "key": "{#1}│ {#keys} WM",
-            "keyColor": "green"
         },
         {
             "type": "custom",
@@ -69,23 +61,19 @@
         {
             "type": "cpu",
             "key": "{#1}│ {#keys} CPU",
-            "keyColor": "yellow"
         },
         {
             "type": "gpu",
             "key": "{#1}│ {#keys} GPU",
-            "keyColor": "yellow",
             "showErrors": false
         },
         {
             "type": "memory",
             "key": "{#1}│ {#keys} RAM",
-            "keyColor": "yellow"
         },
         {
             "type": "disk",
             "key": "{#1}│ {#keys} Disk",
-            "keyColor": "yellow",
             "folders": "/"
         },
         {
