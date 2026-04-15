@@ -210,10 +210,6 @@ if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace web'
 
 [[on-window-detected]]
-if.app-id = 'net.imput.helium'
-run = 'move-node-to-workspace web'
-
-[[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
 run = 'move-node-to-workspace chat'
 
