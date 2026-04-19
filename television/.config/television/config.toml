@@ -244,6 +244,7 @@ fallback_channel = "files"
 "docker-images" = ["docker run"]
 "git-repos" = ["nvim", "code", "hx", "git clone"]
 "ssh-hosts" = ["ssh", "scp", "rsync"]
+"systemd-units" = ["systemctl"]
 "pacman-packages" = ["pacman -R", "pacman -Qi", "pacman -Ql"]
 "man-pages" = ["man"]
 
