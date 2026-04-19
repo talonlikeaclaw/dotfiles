@@ -92,6 +92,7 @@ alias v='nvim'
 alias szsh='source ~/.zshrc'
 alias y='yazi'
 alias h='helix'
+alias glf='git log --oneline | fzf --preview="git show {1} | bat --color=always -l diff" | awk "{print \$1}" | xargs -r git show'
 
 # HOST-ONLY CONFIGURATION
 if [[ -z "$CONTAINER_ID" ]]; then
