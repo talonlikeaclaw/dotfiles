@@ -15,6 +15,13 @@ export OLLAMA_KV_CACHE_TYPE=bf16
 
 # Zsh History
 HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
 
 # CONDITIONAL PLUGIN LOADING
 if [[ -z "$CONTAINER_ID" ]]; then
@@ -73,7 +80,7 @@ alias lg='lazygit'
 alias n='clear ; fastfetch'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias py='python3'
-alias size="du-sh"
+alias size="du -sh"
 alias td='tmux detach'
 alias tn='tmux new-session -s '
 alias ta='tmux attach -t '
