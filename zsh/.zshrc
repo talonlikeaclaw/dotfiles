@@ -128,3 +128,6 @@ export LD_LIBRARY_PATH="$HOME/code/local-llamas/llama.cpp/build/bin:$LD_LIBRARY_
 
 # television shell integration
 eval "$(tv init zsh)"
+
+# opencode
+export PATH=/home/talon/.opencode/bin:$PATH
