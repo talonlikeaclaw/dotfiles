@@ -2,8 +2,8 @@ models:
   "qwen3.6-35b":
     cmd: |
       llama-server \
-        -m /home/talon/models/qwen3.6-35b/Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf \
-        --mmproj /home/talon/models/qwen3.6-35b/mmproj-F16.gguf \
+        -m /home/talon/.llama/models/qwen3.6-35b/Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf \
+        --mmproj /home/talon/.llama/models/qwen3.6-35b/mmproj-F16.gguf \
         --alias qwen3.6-35b \
         --no-mmap \
         --n-cpu-moe 20 \
