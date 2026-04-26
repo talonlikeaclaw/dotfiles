@@ -131,5 +131,6 @@ export LD_LIBRARY_PATH="$HOME/code/local-llamas/llama.cpp/build/bin:$LD_LIBRARY_
 eval "$(tv init zsh)"
 
 # opencode
+alias o='opencode'
 export OPENCODE_ENABLE_EXA=1
 export PATH=/home/talon/.opencode/bin:$PATH

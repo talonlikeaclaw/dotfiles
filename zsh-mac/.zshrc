@@ -92,5 +92,6 @@ esac
 # pnpm end
 
 # opencode
+alias o='opencode'
 export OPENCODE_ENABLE_EXA=1
 export PATH=/Users/talon/.opencode/bin:$PATH
