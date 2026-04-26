@@ -17,5 +17,22 @@
         }
       }
     }
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "http://127.0.0.1:8811/sse",
+      "enabled": true
+    },
+    "fetch": {
+      "type": "remote",
+      "url": "http://127.0.0.1:8812/sse",
+      "enabled": true
+    },
+    "time": {
+      "type": "remote",
+      "url": "http://127.0.0.1:8813/sse",
+      "enabled": true
+    }
   }
 }
