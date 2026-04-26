@@ -1,5 +1,5 @@
 # Export paths
-export PATH="$PATH:$HOME/.local/bin:/opt/homebrew/bin"
+export PATH="$PATH:$HOME/.local/bin:/opt/homebrew/bin:$HOME/go/bin"
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$PATH:/Users/talon/.lmstudio/bin"
@@ -74,7 +74,7 @@ alias shis='history | fzf'
 alias szsh='source ~/.zshrc'
 alias y='yazi'
 alias h='hx'
-
+alias llama-swap='llama-swap -config ~/.config/llama-swap/config.yaml -listen 127.0.0.1:12434'
 # Intialize tools
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
@@ -92,4 +92,5 @@ esac
 # pnpm end
 
 # opencode
+export OPENCODE_ENABLE_EXA=1
 export PATH=/Users/talon/.opencode/bin:$PATH
