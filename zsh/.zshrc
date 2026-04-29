@@ -40,7 +40,6 @@ if [[ -z "$CONTAINER_ID" ]]; then
       you-should-use
       aliases
       colored-man-pages
-      tmux
       zsh-syntax-highlighting
     )
 else
@@ -53,12 +52,6 @@ else
       copyfile
     )
 fi
-
-# Configure tmux
-# ZSH_TMUX_AUTOSTART=true
-# ZSH_TMUX_AUTOCONNECT=true
-ZSH_TMUX_AUTOQUIT=false
-ZSH_TMUX_DEFAULT_SESSION_NAME="mainframe"
 
 # Configure eza
 zstyle ':omz:plugins:eza' dirs-first 'yes'
@@ -81,12 +74,9 @@ alias n='clear ; fastfetch'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias py='python3'
 alias size="du -sh"
-alias td='tmux detach'
-alias tn='tmux new-session -s '
-alias ta='tmux attach -t '
-alias tl='tmux list-sessions'
-alias tk='tmux kill-session -t '
 alias tm='task_manager'
+alias ks='tv kitty-sessions'
+alias ssh='kitten ssh'
 alias r='ranger'
 alias v='nvim'
 alias szsh='source ~/.zshrc'

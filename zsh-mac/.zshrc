@@ -30,15 +30,8 @@ plugins=(
   you-should-use # Requires seperate install
   aliases
   colored-man-pages
-  tmux
   zsh-syntax-highlighting # Requires seperate install
 )
-
-# Configure tmux
-# ZSH_TMUX_AUTOSTART=true
-# ZSH_TMUX_AUTOCONNECT=true
-ZSH_TMUX_AUTOQUIT=false
-ZSH_TMUX_DEFAULT_SESSION_NAME="0-mainframe"
 
 # Configure eza
 zstyle ':omz:plugins:eza' dirs-first 'yes'
@@ -63,11 +56,8 @@ alias n='clear ; fastfetch'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias py='python3'
 alias size="du -sh"
-alias td='tmux detach'
-alias tn='tmux new-session -s '
-alias ta='tmux attach -t '
-alias tl='tmux list-sessions'
-alias tk='tmux kill-session -t '
+alias ks='tv kitty-sessions'
+alias ssh='kitten ssh'
 alias r='ranger'
 alias v='nvim'
 alias shis='history | fzf'
