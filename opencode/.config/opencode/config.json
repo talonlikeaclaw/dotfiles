@@ -33,6 +33,11 @@
       "type": "remote",
       "url": "http://127.0.0.1:8812/sse",
       "enabled": false
+    },
+    "dockerhub": {
+      "type": "remote",
+      "url": "http://127.0.0.1:8814/sse",
+      "enabled": false
     }
   },
   "permission": {
