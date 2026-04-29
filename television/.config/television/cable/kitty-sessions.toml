@@ -1,0 +1,17 @@
+[metadata]
+name = "kitty-sessions"
+description = "Launch kitty startup sessions"
+
+[source]
+command = "ls ~/.config/kitty/sessions/ | sed 's/\\.conf$//'"
+
+[preview]
+command = "cat ~/.config/kitty/sessions/{}.conf"
+
+[keybindings]
+enter = "actions:launch"
+
+[actions.launch]
+description = "Launch kitty session in new OS window"
+command = "setsid kitty --session ~/.config/kitty/sessions/{}.conf >/dev/null 2>&1"
+mode = "execute"
