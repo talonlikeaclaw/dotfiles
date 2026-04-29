@@ -76,7 +76,6 @@ alias py='python3'
 alias size="du -sh"
 alias tm='task_manager'
 alias ks='tv kitty-sessions'
-alias ssh='kitten ssh'
 alias r='ranger'
 alias v='nvim'
 alias szsh='source ~/.zshrc'
@@ -91,11 +90,11 @@ if [[ -z "$CONTAINER_ID" ]]; then
     alias can='bat'
     alias gptoss='llama-server -m ~/.local/share/llama-models/unsloth/gpt-oss-20b-Q4_K_M.gguf -c 60000 --gpu-layers 999 --parallel 2 --batch-size 512 --host 127.0.0.1 --port 8080'
     alias llama-swap='llama-swap -config ~/.config/llama-swap/config.yaml -listen 127.0.0.1:12434'
-    
+
     # Initialize tools
     eval "$(starship init zsh)"
     eval "$(zoxide init zsh)"
-    
+
     # Clear screen and run fastfetch
     clear
     fastfetch

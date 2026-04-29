@@ -57,7 +57,6 @@ alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias py='python3'
 alias size="du -sh"
 alias ks='tv kitty-sessions'
-alias ssh='kitten ssh'
 alias r='ranger'
 alias v='nvim'
 alias shis='history | fzf'
