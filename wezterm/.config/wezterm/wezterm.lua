@@ -103,7 +103,7 @@ config.mouse_bindings = {
   {
     event = { Up = { streak = 1, button = "Left" } },
     mods = "NONE",
-    action = act.CompleteSelection("PrimarySelection"),
+    action = act.Nop,
   },
   {
     event = { Up = { streak = 1, button = "Left" } },
@@ -266,7 +266,7 @@ config.keys = {
     action = act.ReloadConfiguration,
   },
   {
-    key = "p",
+    key = "c",
     mods = "LEADER",
     action = act.ActivateCopyMode,
   },
@@ -299,7 +299,7 @@ config.keys = {
     }),
   },
   {
-    key = "l",
+    key = "o",
     mods = "LEADER",
     action = act.EmitEvent("load_session"),
   },
@@ -333,13 +333,47 @@ config.keys = {
     mods = "LEADER|SHIFT",
     action = act.EmitEvent("save_session"),
   },
+  {
+    key = "n",
+    mods = "LEADER",
+    action = act.PromptInputLine({
+      description = "New workspace name",
+      action = wezterm.action_callback(function(window, pane, line)
+        if line and #line > 0 then
+          window:perform_action(act.SwitchToWorkspace({ name = line }), pane)
+        end
+      end),
+    }),
+  },
 }
+
+for i = 1, 9 do
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = "LEADER",
+    action = act.ActivateTab(i - 1),
+  })
+end
 
 local copy_mode_keys = {
   { key = "Escape", mods = "NONE", action = act.CopyMode("Close") },
   { key = "q", mods = "NONE", action = act.CopyMode("Close") },
   { key = "v", mods = "NONE", action = act.CopyMode({ SetSelectionMode = "Cell" }) },
-  { key = "y", mods = "NONE", action = act.CopyTo("Clipboard") },
+  { key = "y", mods = "NONE", action = act.Multiple({ act.CopyTo("Clipboard"), act.CopyMode("Close") }) },
+  { key = "h", mods = "NONE", action = act.CopyMode("MoveLeft") },
+  { key = "j", mods = "NONE", action = act.CopyMode("MoveDown") },
+  { key = "k", mods = "NONE", action = act.CopyMode("MoveUp") },
+  { key = "l", mods = "NONE", action = act.CopyMode("MoveRight") },
+  { key = "LeftArrow", mods = "NONE", action = act.CopyMode("MoveLeft") },
+  { key = "DownArrow", mods = "NONE", action = act.CopyMode("MoveDown") },
+  { key = "UpArrow", mods = "NONE", action = act.CopyMode("MoveUp") },
+  { key = "RightArrow", mods = "NONE", action = act.CopyMode("MoveRight") },
+  { key = "0", mods = "NONE", action = act.CopyMode("MoveToStartOfLine") },
+  { key = "$", mods = "NONE", action = act.CopyMode("MoveToEndOfLineContent") },
+  { key = "g", mods = "NONE", action = act.CopyMode("MoveToScrollbackTop") },
+  { key = "G", mods = "SHIFT", action = act.CopyMode("MoveToScrollbackBottom") },
+  { key = "w", mods = "NONE", action = act.CopyMode("MoveForwardWord") },
+  { key = "b", mods = "NONE", action = act.CopyMode("MoveBackwardWord") },
 }
 
 local default_tables = wezterm.gui.default_key_tables()

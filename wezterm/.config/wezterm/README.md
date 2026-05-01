@@ -44,7 +44,7 @@ Requires the font **Maple Mono NF** to be installed.
 | Binding               | Action                          |
 | --------------------- | ------------------------------- |
 | `Leader + q`          | Close pane (no prompt)          |
-| `Leader + p`          | Enter copy mode                 |
+| `Leader + c`          | Enter copy mode                 |
 | `Leader + u`          | Search                          |
 | `Leader + s`          | Open stdin in nvim (new window) |
 | `Leader + b`          | Broadcast input to all panes    |
@@ -53,15 +53,16 @@ Requires the font **Maple Mono NF** to be installed.
 
 ### Sessions
 
-| Binding            | Action                         |
-| ------------------ | ------------------------------ |
-| `Leader + S`       | Save session                   |
-| `Leader + l`       | Load session (fuzzy picker)    |
-| `Leader + R`       | Restore session (current ws)   |
-| `Leader + f`       | Fork session (duplicate layout)|
-| `Leader + D`       | Delete session                 |
-| `Leader + E`       | Edit session (opens JSON)      |
-| `Leader + a`       | Toggle auto-save               |
+| Binding            | Action                          |
+| ------------------ | ------------------------------- |
+| `Leader + n`       | New workspace (prompt for name) |
+| `Leader + S`       | Save session                    |
+| `Leader + o`       | Load session (fuzzy picker)     |
+| `Leader + R`       | Restore session (current ws)    |
+| `Leader + f`       | Fork session (duplicate layout) |
+| `Leader + D`       | Delete session                  |
+| `Leader + E`       | Edit session (opens JSON)       |
+| `Leader + a`       | Toggle auto-save                |
 
 ### Copy Mode
 
