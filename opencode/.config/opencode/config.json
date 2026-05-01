@@ -31,7 +31,7 @@
     },
     "weather": {
       "type": "remote",
-      "url": "http://127.0.0.1:8812/sse",
+      "url": "http://127.0.0.1:8812/mcp",
       "enabled": false
     },
     "dockerhub": {
