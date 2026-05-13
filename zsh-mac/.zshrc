@@ -14,6 +14,13 @@ export JAVA_HOME=$(/usr/libexec/java_home -v17)
 
 # Zsh History
 HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
 
 # Add Oh My Zsh plugins
 plugins=(
@@ -63,6 +70,7 @@ alias shis='history | fzf'
 alias szsh='source ~/.zshrc'
 alias y='yazi'
 alias h='hx'
+alias glf='git log --oneline | fzf --preview="git show {1} | bat --color=always -l diff" | awk "{print \$1}" | xargs -r git show'
 alias llama-swap='llama-swap -config ~/.config/llama-swap/config.yaml -listen 127.0.0.1:12434'
 # Intialize tools
 eval "$(starship init zsh)"
