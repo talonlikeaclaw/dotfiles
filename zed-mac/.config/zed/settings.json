@@ -72,14 +72,14 @@
   },
   "show_edit_predictions": false,
   "disable_ai": true,
-  /* Duplicated key auto-commented: "agent": {
-    "default_height": 320.0,
+  "agent": {
+    "default_height": 250.0,
     "default_width": 640.0,
     "dock": "left",
     "button": false,
     "favorite_models": [],
     "model_parameters": [],
-  }, */
+  },
   "collaboration_panel": {
     "button": false,
   },
