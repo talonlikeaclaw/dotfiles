@@ -1,4 +1,24 @@
 models:
+  "qwen3.6-35b-mtp":
+    proxy: "http://127.0.0.1:11435"
+    cmd: |
+      llama-server \
+        -m /home/talon/.llama/models/qwen3.6-35b-abliterated/Huihui-Qwen3.6-35B-A3B-abliterated-ggml-model-Q4_K.gguf \
+        --mmproj /home/talon/.llama/models/qwen3.6-35b-abliterated/mmproj-model-f16.gguf \
+        --alias qwen3.6-35b-mtp \
+        --no-mmap \
+        --n-cpu-moe 20 \
+        --spec-draft-n-max 5 \
+        -ctk q8_0 -ctv q8_0 \
+        --parallel 1 \
+        --temp 0.6 \
+        --top-p 0.95 \
+        --top-k 20 \
+        --min-p 0.0 \
+        --host 0.0.0.0 \
+        --port 11435 \
+        --ctx-size 65536
+
   "qwen3.6-35b":
     proxy: "http://127.0.0.1:11434"
     cmd: |
