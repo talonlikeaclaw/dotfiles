@@ -18,7 +18,7 @@ format = "[$output]($style) "
 
 [directory]
 truncate_to_repo = true
-format = "[ $path]($style)[$read_only]($read_only_style) "
+format = "[  $path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
 format = "on [$branch]($style) "
