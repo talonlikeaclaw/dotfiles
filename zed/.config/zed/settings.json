@@ -1,5 +1,8 @@
 {
   "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry"
     }
@@ -23,10 +26,26 @@
   },
   "ssh_connections": [
     {
-      "host": "dawson-vm",
+      "host": "devbox",
       "args": [],
-      "projects": [],
-    },
+      "projects": [
+        {
+          "paths": [
+            "/home/talon/Code/active/homelab"
+          ]
+        },
+        {
+          "paths": [
+            "/home/talon/Code/active/personal-portfolio"
+          ]
+        },
+        {
+          "paths": [
+            "/home/talon/Code/active/plant-tracker/./"
+          ]
+        }
+      ]
+    }
   ],
   "git": {
     "path_style": "file_name_first",
@@ -56,7 +75,7 @@
     "enabled_in_text_threads": false,
   },
   "show_edit_predictions": false,
-  "disable_ai": true,
+  "disable_ai": false,
   "agent": {
     "default_height": 320.0,
     "default_width": 640.0,
