@@ -25,6 +25,7 @@ Each tool is a Stow package that mirrors the target directory tree from `$HOME`.
 | `ghostty` | GPU-accelerated terminal emulator |
 | `gitmux` | Git status in tmux status bar |
 | `helix` | Modal text editor written in Rust |
+| `herdr` | Terminal workspace manager |
 | `kitty` | Terminal emulator |
 | `nvim` | Neovim config |
 | `starship` | Shell prompt |
