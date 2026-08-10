@@ -43,6 +43,11 @@
           "paths": [
             "/home/talon/Code/active/plant-tracker/./"
           ]
+        },
+        {
+          "paths": [
+            "/home/talon/Code/active/talonlikeaclaw.com"
+          ]
         }
       ]
     }
