@@ -1,0 +1,37 @@
+position = "top"
+anchor_to_edges = false
+exclusive_zone = false
+height = 38
+popup_gap = 8
+
+[margin]
+top = 12
+
+[[start]]
+type = "workspaces"
+favorites = ["1", "2", "3", "4", "5"]
+all_monitors = false
+
+[[center]]
+type = "focused"
+icon_size = 16
+truncate = "end"
+
+[[end]]
+type = "clock"
+format = "%a %d %b  %H:%M"
+
+[[end]]
+type = "volume"
+format = "{icon} {percentage}%"
+max_volume = 100
+sink_slider_orientation = "vertical"
+
+[[end]]
+type = "network_manager"
+icon_size = 16
+types_blacklist = ["loopback", "bridge", "veth", "tun"]
+
+[[end]]
+type = "tray"
+icon_size = 16

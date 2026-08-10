@@ -1,0 +1,116 @@
+* {
+    font-family: "Maple Mono NF";
+    font-size: 13px;
+}
+
+#bar,
+popover,
+popover contents,
+calendar {
+    background: #1e1e2e;
+    color: #cdd6f4;
+}
+
+#bar {
+    border: 1px solid #45475a;
+    border-radius: 19px;
+}
+
+button,
+label,
+box {
+    background: transparent;
+    color: #cdd6f4;
+}
+
+#start,
+#center,
+#end {
+    padding: 0 6px;
+}
+
+#start > *,
+#end > * {
+    margin: 0 2px;
+}
+
+.workspaces .item,
+.volume,
+.clock,
+.network_manager,
+.tray .item {
+    min-height: 28px;
+    padding: 0 8px;
+    border-radius: 12px;
+}
+
+.workspaces .item {
+    color: #a6adc8;
+}
+
+.workspaces .item.visible {
+    color: #cdd6f4;
+}
+
+.workspaces .item.focused {
+    background: #f5c2e7;
+    color: #1e1e2e;
+}
+
+.workspaces .item.urgent {
+    background: #f38ba8;
+    color: #1e1e2e;
+}
+
+.workspaces .item:hover,
+.volume:hover,
+.clock:hover,
+.network_manager:hover,
+.tray .item:hover {
+    background: #313244;
+}
+
+.focused {
+    color: #89b4fa;
+    padding: 0 18px;
+}
+
+.focused .label {
+    font-weight: bold;
+}
+
+.clock {
+    color: #f9e2af;
+}
+
+.volume,
+.network_manager {
+    color: #94e2d5;
+}
+
+popover {
+    border: 1px solid #45475a;
+    border-radius: 14px;
+    padding: 8px;
+}
+
+calendar:selected,
+calendar .today {
+    background: #f5c2e7;
+    color: #1e1e2e;
+}
+
+scale > trough {
+    background: #313244;
+    border-radius: 8px;
+}
+
+scale > trough > highlight {
+    background: #89b4fa;
+    border-radius: 8px;
+}
+
+scale > trough > slider {
+    background: #f5c2e7;
+    border-radius: 50%;
+}

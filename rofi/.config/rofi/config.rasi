@@ -1,0 +1,14 @@
+configuration {
+    modes: "drun";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    drun-display-format: "{name}";
+    matching: "fuzzy";
+    sort: true;
+    cycle: true;
+    font: "Maple Mono NF 13";
+    terminal: "wezterm";
+    display-drun: "Apps";
+}
+
+@theme "theme.rasi"
