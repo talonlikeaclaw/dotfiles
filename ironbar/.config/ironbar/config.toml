@@ -1,25 +1,48 @@
-position = "top"
-anchor_to_edges = false
+name = "main"
+position = "bottom"
+anchor_to_edges = true
 exclusive_zone = false
-height = 38
+autohide = 800
+start_hidden = false
+popup_autohide = false
+height = 34
 popup_gap = 8
 
 [margin]
-top = 12
+bottom = 8
 
 [[start]]
 type = "workspaces"
 favorites = ["1", "2", "3", "4", "5"]
 all_monitors = false
 
-[[center]]
-type = "focused"
-icon_size = 16
+[[start]]
+type = "music"
+format = "{title} - {artist}"
 truncate = "end"
 
+[[center]]
+type = "script"
+name = "focused-title"
+mode = "poll"
+interval = 500
+cmd = "niri msg -j windows | jq -r '.[] | select(.is_focused) | .title'"
+
 [[end]]
-type = "clock"
-format = "%a %d %b  %H:%M"
+type = "tray"
+icon_size = 16
+
+[[end]]
+type = "inhibit"
+
+[[end]]
+type = "clipboard"
+max_items = 10
+
+[[end]]
+type = "network_manager"
+icon_size = 16
+types_blacklist = ["loopback", "bridge", "veth", "tun"]
 
 [[end]]
 type = "volume"
@@ -28,10 +51,13 @@ max_volume = 100
 sink_slider_orientation = "vertical"
 
 [[end]]
-type = "network_manager"
-icon_size = 16
-types_blacklist = ["loopback", "bridge", "veth", "tun"]
+type = "clock"
+format = "%a %d %b  %H:%M"
 
 [[end]]
-type = "tray"
-icon_size = 16
+type = "sys_info"
+format = ["CPU {cpu_percent}%", "MEM {memory_percent}%"]
+
+  [end.interval]
+  cpu = 3
+  memory = 10

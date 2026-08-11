@@ -106,12 +106,24 @@ input {
     position x=1280 y=0
 }
 
+// The portrait LG sits to the left of the primary display.
+output "DP-3" {
+    transform "90"
+    position x=0 y=0
+}
+
+output "DP-2" {
+    position x=1440 y=0
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
+    background-color "#11111b"
+
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -138,7 +150,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.66667; }
+    default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -159,7 +171,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 4
+        width 1
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -167,7 +179,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#f5c2e7"
+        active-color "#5f8062"
 
         // Color of the ring on inactive monitors.
         //
@@ -267,8 +279,8 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// Ironbar provides the session's workspace and system status panel.
-spawn-at-startup "ironbar"
+// Noctalia provides the session's launcher and system status panel.
+spawn-at-startup "noctalia"
 spawn-at-startup "mako"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 
@@ -280,12 +292,9 @@ hotkey-overlay {
     // skip-at-startup
 }
 
-// Uncomment this line to ask the clients to omit their client-side decorations if possible.
-// If the client will specifically ask for CSD, the request will be honored.
-// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
-// This option will also fix border/focus ring drawing behind some semitransparent windows.
-// After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+// Ask clients to omit their own decorations so niri can apply the rounded geometry consistently.
+// Restart applications after changing this setting for it to take effect.
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -314,12 +323,8 @@ overview {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
+// Work around WezTerm's initial configure bug by letting it choose its width.
 window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
 }
@@ -345,9 +350,8 @@ window-rule {
     // block-out-from "screencast"
 }
 
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+// Apply subtle rounded corners consistently to all windows.
+window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
@@ -369,7 +373,9 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
-    Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
+    Mod+Space hotkey-overlay-title="Run an Application: Noctalia" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S hotkey-overlay-title="Open Noctalia Control Center" { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Shift+B hotkey-overlay-title="Toggle Noctalia Bar" { spawn-sh "noctalia msg bar-toggle main"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

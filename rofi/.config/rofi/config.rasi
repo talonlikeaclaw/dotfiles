@@ -1,5 +1,5 @@
 configuration {
-    modes: "drun";
+    modes: "drun,run,window";
     show-icons: true;
     icon-theme: "Papirus-Dark";
     drun-display-format: "{name}";
@@ -9,6 +9,12 @@ configuration {
     font: "Maple Mono NF 13";
     terminal: "wezterm";
     display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Windows";
+    window-format: "{w}  <span weight='light' alpha='60%'>{c}</span>";
+    sidebar-mode: true;
+    kb-mode-next: "Control+Tab";
+    kb-mode-previous: "Control+ISO_Left_Tab";
 }
 
 @theme "theme.rasi"

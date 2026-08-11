@@ -14,13 +14,22 @@ calendar {
 #bar {
     border: 1px solid #45475a;
     border-radius: 19px;
+    padding: 3px 10px;
 }
 
+.background,
+#start,
+#center,
+#end,
 button,
 label,
 box {
     background: transparent;
     color: #cdd6f4;
+}
+
+button {
+    padding: 0 8px;
 }
 
 #start,
@@ -29,9 +38,8 @@ box {
     padding: 0 6px;
 }
 
-#start > *,
-#end > * {
-    margin: 0 2px;
+#end > * + * {
+    margin-left: 6px;
 }
 
 .workspaces .item,
@@ -39,9 +47,23 @@ box {
 .clock,
 .network_manager,
 .tray .item {
-    min-height: 28px;
-    padding: 0 8px;
+    min-height: 26px;
+    padding: 0 7px;
     border-radius: 12px;
+}
+
+.workspaces {
+    padding: 0 2px;
+}
+
+.workspaces .item {
+    min-width: 26px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.tray .item {
+    padding: 0 4px;
 }
 
 .workspaces .item {
@@ -53,8 +75,9 @@ box {
 }
 
 .workspaces .item.focused {
-    background: #f5c2e7;
-    color: #1e1e2e;
+    background: transparent;
+    border-color: #5f8062;
+    color: #cdd6f4;
 }
 
 .workspaces .item.urgent {
@@ -70,12 +93,9 @@ box {
     background: #313244;
 }
 
-.focused {
+#focused-title {
     color: #89b4fa;
     padding: 0 18px;
-}
-
-.focused .label {
     font-weight: bold;
 }
 
@@ -88,16 +108,46 @@ box {
     color: #94e2d5;
 }
 
-popover {
+.music {
+    color: #cba6f7;
+    padding: 0 10px;
+}
+
+.clipboard,
+.inhibit,
+.sysinfo {
+    color: #a6adc8;
+    padding: 0 7px;
+}
+
+.sysinfo .item + .item {
+    margin-left: 6px;
+}
+
+popover,
+popover contents {
     border: 1px solid #45475a;
     border-radius: 14px;
     padding: 8px;
 }
 
-calendar:selected,
-calendar .today {
+.popup-clock {
+    padding: 14px;
+}
+
+.popup-clock .calendar-clock {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.popup-clock .calendar .today {
     background: #f5c2e7;
     color: #1e1e2e;
+}
+
+.popup-volume .device-box,
+.popup-volume .apps-box .app-box {
+    padding: 6px;
 }
 
 scale > trough {

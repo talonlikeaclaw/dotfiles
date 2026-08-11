@@ -9,7 +9,7 @@ SHARED=(bat fastfetch git ghostty gitmux helix herdr kitty nvim opencode starshi
 if [[ "$OS" == "Darwin" ]]; then
     PLATFORM=(aerospace llama-swap-mac wezterm-mac zed-mac zsh-mac)
 elif [[ "$OS" == "Linux" ]]; then
-    PLATFORM=(ironbar llama-swap niri rofi wezterm zed zsh)
+    PLATFORM=(llama-swap niri noctalia wezterm zed zsh)
 fi
 
 cd "$DOTFILES"

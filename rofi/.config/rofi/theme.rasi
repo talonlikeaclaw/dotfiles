@@ -21,7 +21,7 @@ window {
 }
 
 mainbox {
-    children: [ inputbar, listview ];
+    children: [ inputbar, message, listview, mode-switcher ];
     spacing: 14px;
     background-color: @transparent;
 }
@@ -30,13 +30,9 @@ inputbar {
     children: [ prompt, entry ];
     background-color: @surface;
     border: 1px;
-    border-color: @overlay;
+    border-color: @pink;
     border-radius: 12px;
     padding: 10px 14px;
-}
-
-inputbar:focus {
-    border-color: @pink;
 }
 
 prompt {
@@ -48,6 +44,15 @@ entry {
     text-color: @text;
     placeholder: "Search applications";
     placeholder-color: @muted;
+}
+
+message {
+    background-color: @transparent;
+    padding: 0 2px;
+}
+
+textbox {
+    text-color: @muted;
 }
 
 listview {
@@ -64,8 +69,10 @@ element {
     padding: 10px;
 }
 
-element selected {
+element selected.normal {
     background-color: @surface;
+    border: 1px;
+    border-color: @pink;
 }
 
 element-icon {
@@ -78,6 +85,28 @@ element-text {
     background-color: @transparent;
 }
 
-element-text selected {
+element-text selected.normal {
     text-color: @pink;
+}
+
+mode-switcher {
+    spacing: 8px;
+    background-color: @transparent;
+}
+
+button {
+    background-color: @surface;
+    border: 1px;
+    border-color: @overlay;
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+button selected {
+    background-color: @pink;
+    border-color: @pink;
+}
+
+button selected textbox {
+    text-color: @base;
 }

@@ -1,0 +1,43 @@
+[shell]
+font_family = "Maple Mono NF"
+time_format = "{:%H:%M}"
+clipboard_history_max_entries = 10
+
+[shell.panel]
+launcher_placement = "floating"
+launcher_position = "center"
+clipboard_placement = "floating"
+clipboard_position = "center"
+control_center_placement = "attached"
+
+[shell.launcher]
+categories = true
+show_icons = true
+sort_by_usage = true
+
+# Mako remains the notification daemon during this transition.
+[notification]
+enable_daemon = false
+
+[theme]
+mode = "dark"
+source = "builtin"
+builtin = "Catppuccin"
+
+[bar.main]
+position = "bottom"
+thickness = 34
+margin_ends = 0
+margin_edge = 0
+padding = 10
+widget_spacing = 6
+radius = 0
+shadow = false
+auto_hide = true
+reserve_space = false
+start = ["launcher", "workspaces", "media"]
+center = ["active_window"]
+end = ["tray", "clipboard", "network", "volume", "clock", "sysmon", "control-center"]
+
+[widget.clock]
+format = "{:%a %d %b  %H:%M}"
