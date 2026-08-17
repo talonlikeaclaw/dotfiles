@@ -23,25 +23,21 @@
   },
   "ssh_connections": [
     {
-      "host": "dawson-vm",
+      "host": "devbox",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/talon"],
+          "paths": [
+            "/home/talon/Code/active/personal-portfolio"
+          ]
         },
         {
-          "paths": ["/home/talon/dev"],
-        },
-        {
-          "paths": ["/home/talon/dev/520-project"],
-        },
-      ],
-    },
-    {
-      "host": "dawson-vm",
-      "args": [],
-      "projects": [],
-    },
+          "paths": [
+            "/home/talon/Code/active/plant-tracker"
+          ]
+        }
+      ]
+    }
   ],
   "git": {
     "path_style": "file_name_first",
