@@ -7,7 +7,7 @@ OS=$(uname)
 SHARED=(bat fastfetch git ghostty gitmux helix herdr kitty nvim opencode starship television tmux)
 
 if [[ "$OS" == "Darwin" ]]; then
-    PLATFORM=(aerospace llama-swap-mac wezterm-mac zed-mac zsh-mac)
+    PLATFORM=(aerospace llama-swap-mac little-coder-mac wezterm-mac zed-mac zsh-mac)
 elif [[ "$OS" == "Linux" ]]; then
     PLATFORM=(llama-swap niri noctalia wezterm zed zsh)
 fi

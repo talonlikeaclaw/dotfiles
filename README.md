@@ -27,9 +27,21 @@ Each tool is a Stow package that mirrors the target directory tree from `$HOME`.
 | `helix` | Modal text editor written in Rust |
 | `herdr` | Terminal workspace manager |
 | `kitty` | Terminal emulator |
+| `little-coder-mac` | macOS local coding-agent model registry |
 | `nvim` | Neovim config |
 | `starship` | Shell prompt |
 | `tmux` | Terminal multiplexer |
+
+## Little Coder (macOS)
+
+The macOS-only Stow package targets MTPLX at `http://127.0.0.1:8000/v1`. Start the local server with `mtplx start` (or the MTPLX app), then run `little-coder` or `little-coder --model mtplx/mtplx-qwen36-35b-a3b-optimized-speed`. MTPLX selects the loaded model; update the configured ID if `GET /v1/models` reports a different model. No API key is required.
+
+Verify the server and configured model before launching the agent:
+
+```bash
+curl http://127.0.0.1:8000/v1/models
+little-coder --list-models
+```
 
 ### Platform-specific packages
 
