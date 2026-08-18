@@ -7,6 +7,10 @@ fish/fish_plugins
 fish/fish_variables
 **/.claude/
 
+# Generated little-coder research and tuning output
+**/deep-research-*.md
+outputs/cli/tune/
+
 # TPM-managed plugins (installed at runtime via prefix+I, not committed to repo)
 tmux/.config/tmux/plugins/tmux
 tmux/.config/tmux/plugins/tmux-continuum
