@@ -2,8 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/can1357/oh-my-pi/main/packages/coding-agent/src/config/mcp-schema.json",
   "mcpServers": {
     "context7": {
-      "type": "sse",
-      "url": "http://127.0.0.1:8811/sse"
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "local-mcp-context7",
+        "--transport",
+        "stdio"
+      ]
     }
   }
 }
