@@ -11,6 +11,12 @@ fish/fish_variables
 **/deep-research-*.md
 outputs/cli/tune/
 
+# Herdr runtime state and logs
+herdr/.config/herdr/.plugins.lock
+herdr/.config/herdr/herdr-client.log
+herdr/.config/herdr/herdr-server.log
+herdr/.config/herdr/session.json
+
 # TPM-managed plugins (installed at runtime via prefix+I, not committed to repo)
 tmux/.config/tmux/plugins/tmux
 tmux/.config/tmux/plugins/tmux-continuum
