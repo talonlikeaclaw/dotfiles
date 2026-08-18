@@ -9,7 +9,7 @@ export PATH="$DOTNET_ROOT:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export OLLAMA_HOST=0.0.0.0:11434
-export EDITOR=/opt/homebrew/bin/hx
+export EDITOR=/opt/homebrew/bin/nvim
 export JAVA_HOME=$(/usr/libexec/java_home -v17)
 
 # Zsh History
