@@ -11,6 +11,42 @@
         "--transport",
         "stdio"
       ]
+    },
+    "time": {
+      "command": "docker",
+      "args": [
+        "compose",
+        "-f",
+        "/home/talon/Code/active/local-mcp/compose.yaml",
+        "run",
+        "--rm",
+        "-T",
+        "time"
+      ]
+    },
+    "dockerhub": {
+      "command": "docker",
+      "args": [
+        "compose",
+        "-f",
+        "/home/talon/Code/active/local-mcp/compose.yaml",
+        "run",
+        "--rm",
+        "-T",
+        "dockerhub"
+      ]
+    },
+    "weather": {
+      "command": "docker",
+      "args": [
+        "compose",
+        "-f",
+        "/home/talon/Code/active/local-mcp/compose.yaml",
+        "run",
+        "--rm",
+        "-T",
+        "weather"
+      ]
     }
   }
 }
