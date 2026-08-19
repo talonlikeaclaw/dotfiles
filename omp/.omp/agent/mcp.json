@@ -41,6 +41,11 @@
         "-c",
         "exec docker compose -f \"$HOME/Code/active/local-mcp/compose.yaml\" run --rm -T next-devtools"
       ]
+    },
+    "huggingface": {
+      "enabled": false,
+      "type": "http",
+      "url": "https://huggingface.co/mcp"
     }
   }
 }
