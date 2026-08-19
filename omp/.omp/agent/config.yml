@@ -32,6 +32,10 @@ theme:
   dark: titanium
   light: light
 setupVersion: 1
+memory:
+  backend: mnemopi
+mnemopi:
+  scoping: per-project-tagged
 defaultThinkingLevel: medium
 dev:
   autoqaConsent: granted
