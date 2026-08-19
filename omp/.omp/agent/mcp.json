@@ -13,53 +13,33 @@
       ]
     },
     "time": {
-      "command": "docker",
+      "command": "sh",
       "args": [
-        "compose",
-        "-f",
-        "/home/talon/Code/active/local-mcp/compose.yaml",
-        "run",
-        "--rm",
-        "-T",
-        "time"
+        "-c",
+        "exec docker compose -f \"$HOME/Code/active/local-mcp/compose.yaml\" run --rm -T time"
       ]
     },
     "dockerhub": {
       "enabled": false,
-      "command": "docker",
+      "command": "sh",
       "args": [
-        "compose",
-        "-f",
-        "/home/talon/Code/active/local-mcp/compose.yaml",
-        "run",
-        "--rm",
-        "-T",
-        "dockerhub"
+        "-c",
+        "exec docker compose -f \"$HOME/Code/active/local-mcp/compose.yaml\" run --rm -T dockerhub"
       ]
     },
     "weather": {
-      "command": "docker",
+      "command": "sh",
       "args": [
-        "compose",
-        "-f",
-        "/home/talon/Code/active/local-mcp/compose.yaml",
-        "run",
-        "--rm",
-        "-T",
-        "weather"
+        "-c",
+        "exec docker compose -f \"$HOME/Code/active/local-mcp/compose.yaml\" run --rm -T weather"
       ]
     },
     "next-devtools": {
       "enabled": false,
-      "command": "docker",
+      "command": "sh",
       "args": [
-        "compose",
-        "-f",
-        "/home/talon/Code/active/local-mcp/compose.yaml",
-        "run",
-        "--rm",
-        "-T",
-        "next-devtools"
+        "-c",
+        "exec docker compose -f \"$HOME/Code/active/local-mcp/compose.yaml\" run --rm -T next-devtools"
       ]
     }
   }
