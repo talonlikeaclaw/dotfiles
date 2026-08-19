@@ -25,6 +25,7 @@
       ]
     },
     "dockerhub": {
+      "enabled": false,
       "command": "docker",
       "args": [
         "compose",
@@ -46,6 +47,19 @@
         "--rm",
         "-T",
         "weather"
+      ]
+    },
+    "next-devtools": {
+      "enabled": false,
+      "command": "docker",
+      "args": [
+        "compose",
+        "-f",
+        "/home/talon/Code/active/local-mcp/compose.yaml",
+        "run",
+        "--rm",
+        "-T",
+        "next-devtools"
       ]
     }
   }
