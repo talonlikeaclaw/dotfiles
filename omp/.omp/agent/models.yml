@@ -1,0 +1,22 @@
+providers:
+  llama-mac:
+    baseUrl: http://100.102.253.122:8080/v1
+    api: openai-completions
+    apiKey: MAC_API_KEY
+    authHeader: true
+    models:
+      - id: kat-coder
+        name: KAT-Coder on MacBook
+        contextWindow: 131072
+        maxTokens: 16384
+
+  llama-arch:
+    baseUrl: http://100.114.241.90:8080/v1
+    api: openai-completions
+    apiKey: ARCH_API_KEY
+    authHeader: true
+    models:
+      - id: kat-coder
+        name: KAT-Coder on EndeavourOS
+        contextWindow: 131072
+        maxTokens: 16384
