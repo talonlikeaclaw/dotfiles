@@ -166,6 +166,14 @@ if.app-id = 'com.openai.chat'
 run = 'move-node-to-workspace ai'
 
 [[on-window-detected]]
+if.app-id = 'app.omlx'
+run = 'move-node-to-workspace ai'
+
+[[on-window-detected]]
+if.app-id = 'com.youssofal.mtplx'
+run = 'move-node-to-workspace ai'
+
+[[on-window-detected]]
 if.app-id = 'com.tidal.desktop'
 run = 'move-node-to-workspace media'
 
