@@ -1,5 +1,5 @@
-providers:
-  webSearchOrder:
+providers: 
+  webSearchOrder: 
     - codex
     - perplexity
     - gemini
@@ -23,25 +23,25 @@ providers:
     - google
     - mojeek
     - public
-modelRoles:
+modelRoles: 
   default: openai-codex/gpt-5.6-terra
   smol: openai-codex/gpt-5.6-luna
   slow: openai-codex/gpt-5.6-sol
 symbolPreset: nerd
-theme:
+theme: 
   dark: titanium
   light: light
-setupVersion: 1
-memory:
+setupVersion: 2
+memory: 
   backend: mnemopi
-mnemopi:
+mnemopi: 
   scoping: per-project-tagged
-defaultThinkingLevel: medium
-dev:
+defaultThinkingLevel: auto
+dev: 
   autoqaConsent: granted
-mcp:
+mcp: 
   enableProjectConfig: false
-disabledProviders:
+disabledProviders: 
   - gemini
   - agent-plugins
   - agents
@@ -56,7 +56,7 @@ disabledProviders:
   - opencode
   - vscode
   - windsurf
-skills:
+skills: 
   enableCodexUser: false
   enableClaudeUser: false
   enableClaudeProject: false
@@ -64,8 +64,23 @@ skills:
   enablePiProject: false
   enableAgentsUser: false
   enableAgentsProject: false
-commands:
+commands: 
   enableClaudeUser: false
   enableClaudeProject: false
   enableOpencodeUser: false
   enableOpencodeProject: false
+composer: 
+  shape: rail
+tools: 
+  approvalMode: always-ask
+edit: 
+  mode: hashline
+hideThinkingBlock: true
+autolearn: 
+  enabled: true
+vault: 
+  enabled: true
+security: 
+  enabled: true
+plan: 
+  defaultOnStartup: true
