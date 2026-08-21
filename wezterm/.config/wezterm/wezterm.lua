@@ -4,7 +4,7 @@ local sessions = wezterm.plugin.require("https://github.com/abidibo/wezterm-sess
 
 local config = wezterm.config_builder()
 
-config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 2000 }
+config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 2000 }
 
 config.color_scheme = "Catppuccin Mocha"
 
@@ -135,9 +135,9 @@ end)
 
 config.keys = {
 	{
-		key = "Space",
+		key = "a",
 		mods = "LEADER|CTRL",
-		action = act.SendKey({ key = "Space", mods = "CTRL" }),
+		action = act.SendKey({ key = "a", mods = "CTRL" }),
 	},
 	{
 		key = "\\",
