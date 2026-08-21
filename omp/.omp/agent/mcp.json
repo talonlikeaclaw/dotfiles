@@ -2,14 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/can1357/oh-my-pi/main/packages/coding-agent/src/config/mcp-schema.json",
   "mcpServers": {
     "context7": {
-      "command": "docker",
+      "command": "sh",
       "args": [
-        "run",
-        "--rm",
-        "-i",
-        "local-mcp-context7",
-        "--transport",
-        "stdio"
+        "-c",
+        "exec docker compose -f \"$HOME/Code/active/local-mcp/compose.yaml\" run --rm -T context7"
       ]
     },
     "time": {
