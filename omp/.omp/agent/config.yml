@@ -36,6 +36,13 @@ memory:
   backend: mnemopi
 mnemopi: 
   scoping: per-project-tagged
+compaction: 
+  enabled: true
+  methodOrder:
+    - snapcompact
+  midTurnEnabled: true
+  thresholdPercent: -1
+  thresholdTokens: -1
 defaultThinkingLevel: auto
 dev: 
   autoqaConsent: granted
@@ -73,6 +80,11 @@ composer:
   shape: rail
 tools: 
   approvalMode: always-ask
+  approval:
+    bash: prompt
+    read: allow
+  format: auto
+  intentTracing: true
 edit: 
   mode: hashline
 hideThinkingBlock: true
@@ -83,4 +95,6 @@ vault:
 security: 
   enabled: true
 plan: 
-  defaultOnStartup: true
+  defaultOnStartup: false
+secrets: 
+  enabled: true
