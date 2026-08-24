@@ -20,3 +20,8 @@ providers:
         name: KAT-Coder on EndeavourOS
         contextWindow: 131072
         maxTokens: 16384
+
+      - id: ornith-1.5-35b-a3b
+        name: Ornith-1.5-35B-A3B on EndeavourOS
+        contextWindow: 131072
+        maxTokens: 16384
