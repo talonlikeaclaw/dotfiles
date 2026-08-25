@@ -69,10 +69,22 @@ skills:
   customDirectories:
     - ~/.omp/agent/skill-sources/caveman/skills
     - ~/.omp/agent/skill-sources/ponytail/skills
+    - ~/.omp/agent/skill-sources/anthropics-skills/skills
+    - ~/.omp/agent/skill-sources/vercel-agent-skills/skills
+    - ~/.omp/agent/skill-sources/mattpocock-skills/skills/engineering
+    - ~/.omp/agent/skill-sources/supabase-agent-skills/skills
+    - ~/.omp/agent/manual-skills
   includeSkills:
     - caveman
     - ponytail
     - superpowers
+    - frontend-design-manual
+    - web-design-guidelines
+    - vercel-react-best-practices
+    - vercel-composition-patterns
+    - codebase-design-manual
+    - improve-codebase-architecture
+    - supabase-postgres-best-practices
   enableCodexUser: false
   enableClaudeUser: false
   enableClaudeProject: false

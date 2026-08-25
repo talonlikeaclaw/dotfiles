@@ -29,7 +29,7 @@ After invocation, select the requested workflow, then read its canonical instruc
 Read the selected workflow at:
 
 ```text
-skill://superpowers/reference/skills/<workflow>/SKILL.md
+~/.omp/agent/skills/superpowers/reference/skills/<workflow>/SKILL.md
 ```
 
 For a broad request such as `full workflow`, read `using-superpowers` first, then follow its routing instructions. Do not load unrelated workflow files. If the argument does not name a workflow, ask the user which one to apply.
