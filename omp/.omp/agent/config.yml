@@ -63,7 +63,16 @@ disabledProviders:
   - opencode
   - vscode
   - windsurf
-skills: 
+skills:
+  enabled: true
+  enableSkillCommands: true
+  customDirectories:
+    - ~/.omp/agent/skill-sources/caveman/skills
+    - ~/.omp/agent/skill-sources/ponytail/skills
+  includeSkills:
+    - caveman
+    - ponytail
+    - superpowers
   enableCodexUser: false
   enableClaudeUser: false
   enableClaudeProject: false

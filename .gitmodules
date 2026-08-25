@@ -1,3 +1,12 @@
 [submodule "tmux/.config/tmux/plugins/tpm"]
 	path = tmux/.config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "omp/.omp/agent/skills/superpowers/reference"]
+	path = omp/.omp/agent/skills/superpowers/reference
+	url = https://github.com/obra/superpowers.git
+[submodule "omp/.omp/agent/skill-sources/caveman"]
+	path = omp/.omp/agent/skill-sources/caveman
+	url = https://github.com/JuliusBrussee/caveman.git
+[submodule "omp/.omp/agent/skill-sources/ponytail"]
+	path = omp/.omp/agent/skill-sources/ponytail
+	url = https://github.com/DietrichGebert/ponytail.git
