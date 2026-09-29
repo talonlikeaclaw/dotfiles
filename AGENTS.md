@@ -10,19 +10,23 @@ Personal dotfiles for macOS and EndeavourOS (Arch), managed with **GNU Stow**. E
 ./install.sh          # Detect OS, init submodules, stow all packages
 stow -R --target="$HOME" <pkg>   # Re-stow a single package
 stow -D --target="$HOME" <pkg>   # Unstow a package
-git submodule update --init --recursive  # Bootstrap TPM (only submodule)
+git submodule update --init --recursive  # TPM + Oh My Pi skill sources
 ```
 
 No build, test, lint, or typecheck steps — this is a config-only repo.
 
 ## Architecture
 
-- **Shared packages** (all platforms): `bat`, `fastfetch`, `git`, `ghostty`, `gitmux`, `helix`, `kitty`, `nvim`, `opencode`, `starship`, `television`, `tmux`, `wezterm`
-- **macOS-only**: `aerospace`, `llama-swap-mac`, `zed-mac`, `zsh-mac`
-- **Linux-only**: `llama-swap`, `zed`, `zsh`
-- **Archived** (not stowed): `archive/` (fish, zellij configs kept for reference)
+Package lists are the source of truth in `install.sh` (`SHARED` + `PLATFORM`); `README.md` mirrors them. Keep both in sync when adding a package.
+
+- **Shared** (all platforms): `bat`, `fastfetch`, `git`, `ghostty`, `gitmux`, `helix`, `herdr`, `kitty`, `nvim`, `omp`, `opencode`, `starship`, `television`, `tmux`
+- **macOS-only**: `aerospace`, `karabiner-mac`, `llama-swap-mac`, `little-coder-mac`, `wezterm-mac`, `zed-mac`, `zsh-mac`
+- **Linux-only**: `llama-swap`, `niri`, `noctalia`, `wezterm`, `zed`, `zsh`
+- **Not installed by `install.sh`**: `ironbar`, `rofi` (Wayland bar/launcher superseded by `noctalia`); `archive/` (fish, zellij, crush configs kept for reference)
 
 Platform logic lives in `install.sh` — `$OS` check against `Darwin`/`Linux`.
+
+Subtrees are git submodules: `tmux/.config/tmux/plugins/tpm` (TPM) and the Oh My Pi skills under `omp/.omp/agent/skills/superpowers/reference` + `omp/.omp/agent/skill-sources/*`.
 
 ## Conventions
 
