@@ -1,42 +1,20 @@
-providers: 
-  webSearchOrder: 
-    - codex
-    - perplexity
-    - gemini
-    - anthropic
-    - xai
-    - zai
-    - exa
-    - tinyfish
-    - jina
-    - kagi
-    - tavily
-    - firecrawl
-    - brave
-    - kimi
-    - parallel
-    - synthetic
-    - searxng
-    - startpage
-    - duckduckgo
-    - ecosia
-    - google
-    - mojeek
-    - public
-modelRoles: 
-  default: openai-codex/gpt-5.6-terra
-  smol: openai-codex/gpt-5.6-luna
-  slow: openai-codex/gpt-5.6-sol
+modelRoles:
+  slow: opencode-go/glm-5.3:auto
+  web: openai-codex/gpt-5.6-luna
+  judge: opencode-go/glm-5.3:auto
+  default: opencode-go/deepseek-v4.1-flash
+  smol: opencode-go/deepseek-v4.1-flash:auto
+  vision: opencode-go/deepseek-v4-flash-vision-exp:auto
 symbolPreset: nerd
-theme: 
+theme:
   dark: titanium
   light: light
 setupVersion: 2
-memory: 
+memory:
   backend: mnemopi
-mnemopi: 
+mnemopi:
   scoping: per-project-tagged
-compaction: 
+compaction:
   enabled: true
   methodOrder:
     - snapcompact
@@ -44,11 +22,11 @@ compaction:
   thresholdPercent: -1
   thresholdTokens: -1
 defaultThinkingLevel: auto
-dev: 
+dev:
   autoqaConsent: granted
-mcp: 
+mcp:
   enableProjectConfig: false
-disabledProviders: 
+disabledProviders:
   - gemini
   - agent-plugins
   - agents
@@ -92,30 +70,60 @@ skills:
   enablePiProject: false
   enableAgentsUser: false
   enableAgentsProject: false
-commands: 
+commands:
   enableClaudeUser: false
   enableClaudeProject: false
   enableOpencodeUser: false
   enableOpencodeProject: false
-composer: 
+composer:
   shape: rail
-tools: 
-  approvalMode: always-ask
+tools:
+  approvalMode: yolo
   approval:
-    bash: prompt
+    bash: allow
     read: allow
   format: auto
   intentTracing: true
-edit: 
+edit:
   mode: hashline
 hideThinkingBlock: true
-autolearn: 
+autolearn:
   enabled: true
-vault: 
+vault:
   enabled: true
-security: 
+security:
   enabled: true
-plan: 
+plan:
   defaultOnStartup: false
-secrets: 
+secrets:
   enabled: true
+retry:
+  fallbackChains:
+    web:
+      - web/perplexity
+      - google/gemini-2.5-flash
+      - anthropic/claude-haiku-4-5
+      - xai/grok-4.5
+      - web/zai
+      - web/exa
+      - web/tinyfish
+      - web/jina
+      - web/kagi
+      - web/tavily
+      - web/firecrawl
+      - web/brave
+      - web/kimi
+      - web/parallel
+      - web/synthetic
+      - web/searxng
+      - web/startpage
+      - web/duckduckgo
+      - web/ecosia
+      - web/google
+      - web/mojeek
+      - web/public
+      - google-antigravity/gemini-2.5-flash
+      - openai-codex/gpt-5.6
+      - openai-codex/gpt-5.5
+      - xai-oauth/grok-4.5
+      - web/ollama
