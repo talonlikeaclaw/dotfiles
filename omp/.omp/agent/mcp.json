@@ -42,6 +42,14 @@
       "enabled": false,
       "type": "http",
       "url": "https://huggingface.co/mcp"
+    },
+    "anytype": {
+      "enabled": false,
+      "command": "sh",
+      "args": [
+        "-c",
+        "exec docker compose -f \"$HOME/Code/active/local-mcp/compose.yaml\" run --rm -T anytype"
+      ]
     }
   }
 }
