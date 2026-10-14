@@ -51,6 +51,7 @@ skills:
     - ~/.omp/agent/skill-sources/vercel-agent-skills/skills
     - ~/.omp/agent/skill-sources/mattpocock-skills/skills/engineering
     - ~/.omp/agent/skill-sources/supabase-agent-skills/skills
+    - ~/.omp/agent/skill-sources/impeccable/.agents/skills
     - ~/.omp/agent/manual-skills
   includeSkills:
     - caveman
@@ -63,6 +64,7 @@ skills:
     - codebase-design-manual
     - improve-codebase-architecture
     - supabase-postgres-best-practices
+    - impeccable
   enableCodexUser: false
   enableClaudeUser: false
   enableClaudeProject: false

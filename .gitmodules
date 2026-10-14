@@ -22,3 +22,7 @@
 [submodule "omp/.omp/agent/skill-sources/supabase-agent-skills"]
 	path = omp/.omp/agent/skill-sources/supabase-agent-skills
 	url = https://github.com/supabase/agent-skills.git
+[submodule "omp/.omp/agent/skill-sources/impeccable"]
+	path = omp/.omp/agent/skill-sources/impeccable
+	url = https://github.com/pbakaus/impeccable.git
+	shallow = true
