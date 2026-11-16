@@ -45,6 +45,9 @@ skills:
   enabled: true
   enableSkillCommands: true
   customDirectories:
+    # First so the manual launchers win name collisions against upstream
+    # copies (e.g. improve-codebase-architecture in mattpocock-skills).
+    - ~/.omp/agent/manual-skills
     - ~/.omp/agent/skill-sources/caveman/skills
     - ~/.omp/agent/skill-sources/ponytail/skills
     - ~/.omp/agent/skill-sources/anthropics-skills/skills
@@ -52,7 +55,6 @@ skills:
     - ~/.omp/agent/skill-sources/mattpocock-skills/skills/engineering
     - ~/.omp/agent/skill-sources/supabase-agent-skills/skills
     - ~/.omp/agent/skill-sources/impeccable/.agents/skills
-    - ~/.omp/agent/manual-skills
   includeSkills:
     - caveman
     - ponytail
@@ -65,6 +67,10 @@ skills:
     - improve-codebase-architecture
     - supabase-postgres-best-practices
     - impeccable
+  # The manual launcher above wins the name; drop the upstream duplicate from
+  # discovery (its file stays on disk for the launcher to read).
+  ignoredSkills:
+    - mattpocock-skills/improve-codebase-architecture
   enableCodexUser: false
   enableClaudeUser: false
   enableClaudeProject: false
