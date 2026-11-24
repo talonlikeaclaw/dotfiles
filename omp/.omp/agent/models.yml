@@ -25,3 +25,31 @@ providers:
         name: Ornith-1.5-35B-A3B on EndeavourOS
         contextWindow: 131072
         maxTokens: 16384
+
+  opencode-go-decisions:
+    baseUrl: https://opencode.ai/inference/go/openai/v1
+    api: openai-decisions
+    apiKey: OPENCODE_GO_API_KEY
+    authHeader: true
+    models:
+      - id: gpt-6-luna-decision
+        name: GPT-6 Luna Decision (Go)
+        cost:
+          input: 0.1
+          output: 0
+          cacheRead: 0.01
+          cacheWrite: 0.125
+
+  opencode-go-systemone:
+    baseUrl: https://opencode.ai/inference/go/systemone
+    api: typesafe
+    apiKey: OPENCODE_GO_API_KEY
+    authHeader: true
+    models:
+      - id: jev-1.14
+        name: Jev 1.14 (Go)
+        cost:
+          input: 0.042
+          output: 0
+          cacheRead: 0
+          cacheWrite: 0

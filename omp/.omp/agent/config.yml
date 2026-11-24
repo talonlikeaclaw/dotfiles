@@ -1,10 +1,15 @@
 modelRoles:
-  slow: opencode-go/glm-5.3:auto
-  web: openai-codex/gpt-5.6-luna
-  judge: opencode-go/glm-5.3:auto
   default: opencode-go/deepseek-v4.1-flash
-  smol: opencode-go/deepseek-v4.1-flash:auto
-  vision: opencode-go/deepseek-v4-flash-vision-exp:auto
+  smol: opencode-go/deepseek-v4.1-flash
+  slow: opencode-go/glm-5.3:high
+  plan: opencode-go/glm-5.3:high
+  advisor: opencode-go/glm-5.3:low
+  vision: opencode-go/gemini-4-argon
+  memory: opencode-go/deepseek-v4.1-flash
+  task: opencode-go/deepseek-v4.1-flash
+  judge: opencode-go-systemone/jev-1.14
+  tiny: local/lfm2.5-230m
+  web: web/exa
 symbolPreset: nerd
 theme:
   dark: titanium
@@ -14,6 +19,8 @@ memory:
   backend: mnemopi
 mnemopi:
   scoping: per-project-tagged
+  recallRelevance: auto
+  enhancedRecall: true
 compaction:
   enabled: true
   methodOrder:
@@ -106,14 +113,29 @@ plan:
 secrets:
   enabled: true
 retry:
+  rateLimitWalksChain: true
+  usageAwareFallback: true
   fallbackChains:
+    default:
+      - opencode-zen/deepseek-v4.1-flash
+      - opencode-zen/gpt-6-luna
+    slow:
+      - opencode-zen/glm-5.3
+      - opencode-zen/deepseek-v4.1-flash
+    plan:
+      - opencode-zen/glm-5.3
+      - opencode-zen/deepseek-v4.1-flash
+    judge:
+      - opencode-zen/jev-1.13-free
+      - opencode-zen/jev-1.13
+    vision:
+      - opencode-zen/gemini-4-argon
+      - opencode-zen/gemini-3.8-flash
     web:
+      - web/duckduckgo
+      - web/public
       - web/perplexity
-      - google/gemini-2.5-flash
-      - anthropic/claude-haiku-4-5
-      - xai/grok-4.5
       - web/zai
-      - web/exa
       - web/tinyfish
       - web/jina
       - web/kagi
@@ -125,13 +147,14 @@ retry:
       - web/synthetic
       - web/searxng
       - web/startpage
-      - web/duckduckgo
       - web/ecosia
       - web/google
       - web/mojeek
-      - web/public
-      - google-antigravity/gemini-2.5-flash
-      - openai-codex/gpt-5.6
-      - openai-codex/gpt-5.5
-      - xai-oauth/grok-4.5
       - web/ollama
+checkpoint:
+  enabled: true
+error:
+  notify: "on"
+cycleOrder:
+  - default
+  - slow
